@@ -1,7 +1,7 @@
 
 ![MMV - Advogados](http://mmvadvogados.com.br/wp-content/uploads/2013/03/logo_Advogados_associados_MMV-e1442275300590.jpg)
 
-This is a [Next.js](https://nextjs.org/) 
+This is a [Next.js](https://nextjs.org/) application.
 ![ci](https://github.com/React-Avancado/boilerplate/workflows/ci/badge.svg)
 ## What is inside?
 
