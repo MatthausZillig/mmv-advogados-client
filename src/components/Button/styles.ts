@@ -53,14 +53,18 @@ const WrapperModifiers = {
     background: none;
     box-shadow: none;
     :hover {
-      background: none;
+      background: ${theme.colors.secondary};
       border: 1px solid #6eb9f7;
+      transition: background 0s;
+      color: ${theme.colors.white};
     }
     :active {
-      background-color: none;
+      background-color: ${theme.colors.secondary};
       background-size: 100%;
       transition: border 0s;
+      transition: background 0s;
       border: 1px solid #6eb9f7;
+      color: ${theme.colors.white};
     }
   `
 }
