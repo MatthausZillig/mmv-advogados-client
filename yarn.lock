@@ -1766,6 +1766,11 @@
   resolved "https://registry.yarnpkg.com/@next/env/-/env-10.0.0.tgz#eb0239062226a9c8b604d58d4a4204e26c22eb16"
   integrity sha512-59+6BnOxPoMY64Qy2crDGHtvQgHwIL1SIkWeNiEud1V6ASs59SM9oDGN+Bo/EswII1nn+wQRpMvax0IIN2j+VQ==
 
+"@next/plugin-storybook@^10.0.2":
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/@next/plugin-storybook/-/plugin-storybook-10.0.2.tgz#a4e3bf89ea39523802eba5a7a5a01c57663d1695"
+  integrity sha512-VvUpAFabcG0cG//pVsZeCwrW6HMOKoRtHwM2kqkXP7KXU1QpGyd2GA1JCRzlaX0x+fxZjSKaFaEYp1HVUlZIWg==
+
 "@next/polyfill-module@10.0.0":
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/@next/polyfill-module/-/polyfill-module-10.0.0.tgz#17f59cb7325a03f23b66b979fccc56d133411b0a"
