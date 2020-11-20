@@ -22,10 +22,11 @@
     }
   },
   colors: {
-    primary: '#1F0954',
-    secondary: '#3D7AFD',
-    lightBlue: '#26F7FD',
-    white: '#FAFAFA',
+    primary: '#08327A',
+    secondary: '#0E5BDF',
+    lightBlue: '#E5EEFD',
+    darkBlue: '#051F4D',
+    white: '#FCFCFC',
     black: '#222',
     lightGray: '#EAEAEA',
     gray: '#8F8F8F',

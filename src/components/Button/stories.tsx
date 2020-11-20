@@ -20,6 +20,15 @@ export const Default: Story = (args) => <Button {...args} />
 export const withIcon: Story = (args) => <Button {...args} />
 export const withBorder: Story = (args) => <Button {...args} />
 
+export const asLink: Story = (args) => <Button {...args} />
+
+asLink.args = {
+  size: 'large',
+  children: 'Buy now',
+  as: 'a',
+  href: '/link'
+}
+
 Default.args = {
   children: 'Veja mais'
 }
