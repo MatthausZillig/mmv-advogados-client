@@ -44,9 +44,6 @@ const GlobalStyles = createGlobalStyle`
     body {
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};
-      background-image: url('/img/undraw_quite_town_mg2q (1).svg');
-      background-repeat: no-repeat;
-    }
   `}
 `
 
