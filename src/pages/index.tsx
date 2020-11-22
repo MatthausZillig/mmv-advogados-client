@@ -4,7 +4,6 @@ export default function Home() {
   return (
     <>
       <MenuBar />
-      <div style={{ height: '2000px' }}></div>
     </>
   )
 }
