@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Chip /> should render the chip 1`] = `
+.c0 {
+  color: #FCFCFC;
+  font-size: 1rem;
+  margin: 0px 8px 8px 0px;
+  padding: 4px 8px;
+  background: #0E5BDF;
+  border-radius: 4px;
+  width: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+  class="c0"
+  data-testid="chip"
+>
+  Chip
+</div>
+`

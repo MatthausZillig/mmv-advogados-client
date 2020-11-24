@@ -3,22 +3,40 @@ import BannerGrid, { BannerGridProps } from '.'
 
 const items = [
   {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x580'
+    img: 'https://source.unsplash.com/user/willianjusten/1042x580',
+    title: 'Title',
+    subtitle: 'Subtitle',
+    imgLabel: 'Leia mais'
   },
   {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x582'
+    img: 'https://source.unsplash.com/user/willianjusten/1042x582',
+    title: 'Title',
+    subtitle: 'Subtitle',
+    imgLabel: 'Leia mais'
   },
   {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x581'
+    img: 'https://source.unsplash.com/user/willianjusten/1042x581',
+    title: 'Title',
+    subtitle: 'Subtitle',
+    imgLabel: 'Leia mais'
   },
   {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x580'
+    img: 'https://source.unsplash.com/user/willianjusten/1042x580',
+    title: 'Title',
+    subtitle: 'Subtitle',
+    imgLabel: 'Leia mais'
   },
   {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x582'
+    img: 'https://source.unsplash.com/user/willianjusten/1042x582',
+    title: 'Title',
+    subtitle: 'Subtitle',
+    imgLabel: 'Leia mais'
   },
   {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x581'
+    img: 'https://source.unsplash.com/user/willianjusten/1042x581',
+    title: 'Title',
+    subtitle: 'Subtitle',
+    imgLabel: 'Leia mais'
   }
 ]
 
