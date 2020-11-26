@@ -76,7 +76,7 @@ exports[`<Banner /> should render correctly 1`] = `
 }
 
 .c4 strong {
-  color: #08327A;
+  color: #0E5BDF;
   font-weight: 600;
 }
 
@@ -162,4 +162,4 @@ exports[`<Banner /> should render correctly 1`] = `
     </a>
   </div>
 </main>
-`
+`;

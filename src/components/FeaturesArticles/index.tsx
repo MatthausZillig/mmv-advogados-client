@@ -25,7 +25,7 @@ const FeaturesArticles = ({ items }: FeatureProps) => (
       <Heading>Feature articles</Heading>
       <Button withBorder>VIEW MORE</Button>
     </S.FeatureTitle>
-    <S.FeatureCard>
+    <S.FeatureCard data-testid="card">
       {items.map((item) => (
         <S.FeatureBox key={item.title}>
           <div style={{ maxHeight: '300px' }}>

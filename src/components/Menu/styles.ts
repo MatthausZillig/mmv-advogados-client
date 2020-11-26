@@ -10,7 +10,6 @@ const wrapperModifiers = {
 
 export const Wrapper = styled.menu<MenuProps>`
   ${({ theme, inScroll }) => css`
-    position: fixed;
     width: 100%;
     height: 9rem;
     display: flex;

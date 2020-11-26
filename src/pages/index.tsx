@@ -1,9 +1,5 @@
-import MenuBar from 'components/Menu'
+import Home from 'templates/Home'
 
-export default function Home() {
-  return (
-    <>
-      <MenuBar />
-    </>
-  )
+export default function index() {
+  return <Home />
 }

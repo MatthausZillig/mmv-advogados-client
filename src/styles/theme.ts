@@ -25,7 +25,7 @@
   colors: {
     primary: '#08327A',
     secondary: '#0E5BDF',
-    lightBlue: '#E5EEFD',
+    lightBlue: '#f1f6f9',
     darkBlue: '#051F4D',
     white: '#FCFCFC',
     black: '#222',

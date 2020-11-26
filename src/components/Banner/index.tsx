@@ -22,7 +22,7 @@ const Banner = ({
   buttonLabel,
   buttonLink,
   ribbon,
-  ribbonColor = 'primary',
+  ribbonColor = 'secondary',
   ribbonSize = 'normal'
 }: BannerProps) => {
   return (

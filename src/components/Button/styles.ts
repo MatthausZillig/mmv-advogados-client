@@ -53,10 +53,9 @@ const WrapperModifiers = {
     background: none;
     box-shadow: none;
     :hover {
-      background: ${theme.colors.primary};
+      background: rgba(25, 118, 210, 0.04);
       border: 1px solid ${theme.colors.primary};
       transition: background 100ms ease;
-      color: ${theme.colors.white};
     }
     :active {
       background-color: ${theme.colors.primary};
