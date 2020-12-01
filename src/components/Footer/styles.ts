@@ -1,61 +1,50 @@
 import styled, { css } from 'styled-components'
-import { StyledIconBase } from '@styled-icons/styled-icon'
+import media from 'styled-media-query'
 
-export const IconStyleWrapper = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    justify-content: space-evenly;
-    width: 200px;
-    margin-top: ${theme.spacings.small};
-    cursor: pointer;
-    z-index: ${theme.layers.base};
-    padding: ${theme.spacings.small};
-    ${StyledIconBase} {
-      &:hover {
-        color: ${theme.colors.darkBlue};
-      }
-      color: ${theme.colors.secondary};
-      width: 28px;
-      /* icon styles go here */
-    }
-  `}
-`
+import * as HeadingStyles from 'components/Heading/styles'
 
 export const Wrapper = styled.footer`
-  display: flex;
-  flex-direction: column;
+  ${HeadingStyles.Wrapper} {
+    text-transform: uppercase;
+  }
 `
 
-export const FooterMap = styled.div`
+export const Content = styled.div`
   ${({ theme }) => css`
-    display: flex;
-    position: relative;
-    align-items: center;
-    font-size: ${theme.font.sizes.large};
-    padding: ${theme.spacings.large};
-    color: ${theme.colors.black};
-    flex-direction: column;
-    justify-content: space-evenly;
-    &::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: url('/img/map.png');
-      opacity: 0.5;
-      background-repeat: no-repeat;
-      background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: ${theme.grid.gutter};
+    margin-top: ${theme.spacings.medium};
+    margin-left: auto;
+    margin-right: auto;
+    ${media.greaterThan('medium')`
+      grid-template-columns: repeat(4, 1fr)
+    `}
+  `}
+`
+
+export const Column = styled.div`
+  ${({ theme }) => css`
+    a,
+    span {
+      display: block;
+      color: ${theme.colors.gray};
+      text-decoration: none;
+      margin-bottom: ${theme.spacings.xxsmall};
+      font-size: ${theme.font.sizes.small};
+    }
+    a:hover {
+      text-decoration: underline;
     }
   `}
 `
 
-export const FooterCopyright = styled.div`
+export const Copyright = styled.div`
   ${({ theme }) => css`
-    color: ${theme.colors.lightGray};
-    display: flex;
-    justify-content: center;
-    background-color: ${theme.colors.black};
-    padding: ${theme.spacings.xsmall};
-    font-size: ${theme.font.sizes.small};
+    color: ${theme.colors.gray};
+    font-size: ${theme.font.sizes.xsmall};
+    margin-top: ${theme.spacings.large};
+    margin-bottom: ${theme.spacings.medium};
+    text-align: center;
   `}
 `

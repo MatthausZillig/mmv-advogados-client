@@ -23,15 +23,18 @@
     }
   },
   colors: {
-    primary: '#08327A',
-    secondary: '#0E5BDF',
-    lightBlue: '#f1f6f9',
-    darkBlue: '#051F4D',
-    white: '#FCFCFC',
-    black: '#222',
-    lightGray: '#EAEAEA',
-    gray: '#8F8F8F',
-    darkGray: '#2E2F42'
+    primary: '#0E5BDF',
+    secondary: '#0C4EC0',
+    tertiary: '#6FA1F6',
+    lightBlue: '#E7EFFD',
+    darkBlue: '#0B44A8',
+    heading: '#3CD3C1',
+    white: '#FFF',
+    black: '#020B18',
+    lightGray: '#EAEEF3',
+    gray: '#B6C1D6',
+    darkGray: '#2E2F42',
+    mainBg: '#062760'
   },
   spacings: {
     xxsmall: '0.8rem',

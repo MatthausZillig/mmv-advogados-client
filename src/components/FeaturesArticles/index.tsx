@@ -1,5 +1,7 @@
+import Image from 'next/image'
 import * as S from './styles'
 import Heading from 'components/Heading'
+import MediaMatch from 'components/MediaMatch'
 import Button from 'components/Button'
 import Chip from 'components/Chip'
 
@@ -22,14 +24,20 @@ export type FeatureProps = {
 const FeaturesArticles = ({ items }: FeatureProps) => (
   <S.Wrapper>
     <S.FeatureTitle>
-      <Heading>Feature articles</Heading>
-      <Button withBorder>VIEW MORE</Button>
+      <Heading lineLeft>Novos Artigos</Heading>
+      <Button withBorder>Veja todos</Button>
     </S.FeatureTitle>
     <S.FeatureCard data-testid="card">
       {items.map((item) => (
         <S.FeatureBox key={item.title}>
           <div style={{ maxHeight: '300px' }}>
-            <S.Image src={item.img} role="img" aria-label={item.title} />
+            <Image
+              src={item.img}
+              role="img"
+              aria-label={item.title}
+              layout="intrinsic"
+              unsized
+            />
           </div>
           <S.Card>
             <div style={{ display: 'flex' }}>
@@ -43,6 +51,9 @@ const FeaturesArticles = ({ items }: FeatureProps) => (
           </S.Card>
         </S.FeatureBox>
       ))}
+      <MediaMatch lessThan="medium">
+        <Button>Veja todos</Button>
+      </MediaMatch>
     </S.FeatureCard>
   </S.Wrapper>
 )

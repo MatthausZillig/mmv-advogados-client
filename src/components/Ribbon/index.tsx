@@ -1,6 +1,6 @@
 import * as S from './styles'
 
-export type RibbonColors = 'primary' | 'secondary'
+export type RibbonColors = 'primary' | 'secondary' | 'heading'
 export type RibbonSizes = 'normal' | 'small'
 
 export type RibbonProps = {
@@ -11,7 +11,7 @@ export type RibbonProps = {
 
 const Ribbon = ({
   children,
-  color = 'secondary',
+  color = 'heading',
   size = 'normal'
 }: RibbonProps) => (
   <S.Wrapper color={color} size={size}>

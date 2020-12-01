@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Ribbon, { RibbonColors, RibbonSizes } from 'components/Ribbon'
 import Button from 'components/Button'
 
@@ -22,7 +23,7 @@ const Banner = ({
   buttonLabel,
   buttonLink,
   ribbon,
-  ribbonColor = 'secondary',
+  ribbonColor = 'heading',
   ribbonSize = 'normal'
 }: BannerProps) => {
   return (
@@ -33,7 +34,13 @@ const Banner = ({
         </Ribbon>
       )}
 
-      <S.Image src={img} role="img" aria-label={title} />
+      <Image
+        src={img}
+        role="img"
+        aria-label={title}
+        layout="intrinsic"
+        unsized
+      />
 
       <S.Caption>
         <S.Title>{title}</S.Title>

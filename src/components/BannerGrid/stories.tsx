@@ -1,44 +1,7 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
 import BannerGrid, { BannerGridProps } from '.'
 
-const items = [
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x580',
-    title: 'Title',
-    subtitle: 'Subtitle',
-    imgLabel: 'Leia mais'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x582',
-    title: 'Title',
-    subtitle: 'Subtitle',
-    imgLabel: 'Leia mais'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x581',
-    title: 'Title',
-    subtitle: 'Subtitle',
-    imgLabel: 'Leia mais'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x580',
-    title: 'Title',
-    subtitle: 'Subtitle',
-    imgLabel: 'Leia mais'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x582',
-    title: 'Title',
-    subtitle: 'Subtitle',
-    imgLabel: 'Leia mais'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x581',
-    title: 'Title',
-    subtitle: 'Subtitle',
-    imgLabel: 'Leia mais'
-  }
-]
+import items from './mock'
 
 export default {
   title: 'BannerGrid',

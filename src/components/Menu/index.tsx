@@ -2,6 +2,7 @@ import { useState } from 'react'
 import * as S from './styles'
 import Logo from 'components/Logo'
 import Button from 'components/Button'
+import MediaMatch from 'components/MediaMatch'
 
 export type MenuProps = {
   inScroll?: boolean
@@ -23,7 +24,38 @@ const Menu = () => {
   return (
     <S.Wrapper data-testid="menu" inScroll={navbar}>
       <S.MenuWrapper>
-        <Logo />
+        <Logo objectfit="cover" layout="responsive" quality={100} />
+        <MediaMatch lessThan="medium">
+          <S.Input id="menu-hamburguer" type="checkbox" />
+          <label htmlFor="menu-hamburguer">
+            <S.MenuMobile>
+              <span></span>
+            </S.MenuMobile>
+          </label>
+          <S.Ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Escritório</a>
+            </li>
+            <li>
+              <a href="#">Áreas de atuação</a>
+            </li>
+            <li>
+              <a href="#">Sócios</a>
+            </li>
+            <li>
+              <a href="#">Trabalhe conosco</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">Contato</a>
+            </li>
+          </S.Ul>
+        </MediaMatch>
         <S.MenuNav>
           <S.MenuLinkHome>Home</S.MenuLinkHome>
           <S.MenuLink>

@@ -7,11 +7,14 @@ export const Wrapper = styled.section`
   ${({ theme }) => css`
     display: grid;
     height: 70rem;
+    cursor: pointer;
     grid-template-areas:
       'one two two'
       'one two two'
       'one tree four'
       'one five six';
+
+    grid-template-columns: 2fr 1fr 1fr;
     column-gap: ${theme.spacings.small};
     row-gap: ${theme.spacings.medium};
     ${media.lessThan('medium')`
@@ -23,6 +26,7 @@ export const Wrapper = styled.section`
         'four'
         'five'
         'six';
+      grid-template-columns: 1fr;
     `}
   `}
 `
@@ -48,6 +52,15 @@ export const Image = styled.div<ImageProps>`
   ${({ theme, src }) => css`
     border-radius: 0 0 ${theme.border.radius} ${theme.border.radius};
     position: relative;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+      a {
+        opacity: 1;
+      }
+    }
+    a {
+      opacity: 0;
+    }
     ${media.lessThan('large')`
     ${RibbonStyles.Wrapper} {
       right: 0;
@@ -59,6 +72,7 @@ export const Image = styled.div<ImageProps>`
     ${media.greaterThan('medium')`
     box-shadow: 0 0.4rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   `}
+
     width: 100%;
     height: 100%;
     grid-area: one;
@@ -74,19 +88,70 @@ export const Image2 = styled(Image)`
 `
 
 export const Image3 = styled(Image)`
+  h2,
+  h3 {
+    font-size: 20px;
+  }
   grid-area: tree;
+  &:hover {
+    h2,
+    h3 {
+      opacity: 0;
+      height: 0;
+    }
+  }
+  h2,
+  h3 {
+    opacity: 1;
+  }
 `
 
 export const Image4 = styled(Image)`
   grid-area: four;
+  h2,
+  h3 {
+    font-size: 20px;
+  }
+  &:hover {
+    h2,
+    h3 {
+      opacity: 0;
+      height: 0;
+    }
+  }
+  h2,
+  h3 {
+    opacity: 1;
+  }
 `
 
 export const Image5 = styled(Image)`
   grid-area: five;
+  h2,
+  h3 {
+    font-size: 20px;
+  }
+  &:hover {
+    h2,
+    h3 {
+      opacity: 0;
+      height: 0;
+    }
+  }
+  h2,
+  h3 {
+    opacity: 1;
+  }
 `
 
 export const Image6 = styled(Image)`
   grid-area: six;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-image: none;
+
+  a {
+    opacity: 1;
+  }
 `
 export const Caption = styled.div`
   ${({ theme }) => css`
@@ -94,9 +159,14 @@ export const Caption = styled.div`
     height: 100%;
     background-color: rgba(0, 0, 0, 0.1);
     &:hover {
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.9);
     }
     padding: ${theme.spacings.small};
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     ${media.greaterThan('medium')`
       border-radius: 0 0 ${theme.border.radius} ${theme.border.radius};
       padding: ${theme.spacings.medium};

@@ -85,7 +85,7 @@ export const Wrapper = styled.button<WrapperProps>`
     outline: none;
     text-decoration: none;
     :hover {
-      background: ${theme.colors.darkBlue}
+      background: ${theme.colors.secondary};
         radial-gradient(circle, transparent 1%, ${theme.colors.darkBlue} 1%)
         center/15000%;
     }

@@ -2,8 +2,11 @@ import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
 import * as RibbonStyles from 'components/Ribbon/styles'
+type ImageProps = {
+  src: string
+}
 
-export const Wrapper = styled.main`
+export const Wrapper = styled.main<ImageProps>`
   position: relative;
   ${media.lessThan('large')`
     ${RibbonStyles.Wrapper} {
@@ -16,23 +19,16 @@ export const Wrapper = styled.main`
   ${media.greaterThan('medium')`
     box-shadow: 0 0.4rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   `}
-`
-type ImageProps = {
-  src: string
-}
-export const Image = styled.div<ImageProps>`
-  ${({ theme, src }) => css`
+  img {
     width: 100%;
     height: 23rem;
-    background-color: ${theme.colors.lightGray};
-    background-image: url(${src});
-    background-position: center center;
-    background-size: cover;
+    object-fit: cover;
     ${media.greaterThan('medium')`
       height: 58rem;
     `}
-  `}
+  }
 `
+
 export const Caption = styled.div`
   ${({ theme }) => css`
     width: 100%;

@@ -64,7 +64,7 @@ const GlobalStyles: GlobalStyleComponent<
       ${
         !removeBg &&
         css`
-          background-color: ${theme.colors.lightBlue};
+          background-color: ${theme.colors.mainBg};
         `
       }
   `}

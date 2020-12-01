@@ -11,7 +11,7 @@ export const Wrapper = styled.section`
       justify-content: center;
       margin-top: ${theme.spacings.small};
       li {
-        background: ${theme.colors.gray};
+        background: ${theme.colors.lightBlue};
         width: 1.2rem;
         height: 1.2rem;
         border-radius: 100%;

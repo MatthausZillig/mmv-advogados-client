@@ -13,6 +13,12 @@ export const FeatureTitle = styled.div`
   ${media.lessThan('medium')`
     flex-direction: column;
     justify-content: space-between;
+    h2 {
+      display: none;
+    }
+    button {
+      display: none;
+    }
   `}
 `
 
@@ -25,6 +31,19 @@ export const FeatureBox = styled.div`
   flex-direction: column;
   padding-bottom: 16px;
   overflow: hidden;
+  img {
+    object-fit: cover;
+    width: 538px;
+    height: 300px;
+    transform: scale(1);
+    ${media.lessThan('medium')`
+    width: 300px;
+  `}
+    &:hover {
+      transition: transform 450ms ease-out;
+      transform: scale(1.2);
+    }
+  }
   ${media.lessThan('medium')`
     width: 300px;
   `}
@@ -59,12 +78,16 @@ export const Card = styled.div`
 `
 
 export const FeatureCard = styled.div`
-  display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
-  margin-top: 4rem;
-  ${media.lessThan('medium')`
+  ${({ theme }) => css`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: calc(${theme.spacings.large} * 2);
+    ${media.lessThan('medium')`
     flex-direction: column;
+    margin-top: 0;
+  `}
   `}
 `
 

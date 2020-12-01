@@ -7,8 +7,8 @@ const wrapperModifiers = {
   color: (theme: DefaultTheme, color: RibbonColors) => css`
     background-color: ${theme.colors[color]};
     &::before {
-      border-left-color: ${darken(0.2, theme.colors[color])};
-      border-top-color: ${darken(0.2, theme.colors[color])};
+      border-left-color: ${darken(0.1, theme.colors[color])};
+      border-top-color: ${darken(0.1, theme.colors[color])};
     }
   `,
 
