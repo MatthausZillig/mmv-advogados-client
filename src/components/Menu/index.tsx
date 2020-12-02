@@ -24,7 +24,7 @@ const Menu = () => {
   return (
     <S.Wrapper data-testid="menu" inScroll={navbar}>
       <S.MenuWrapper>
-        <Logo objectfit="cover" layout="responsive" quality={100} />
+        <Logo quality={100} />
         <MediaMatch lessThan="medium">
           <S.Input id="menu-hamburguer" type="checkbox" />
           <label htmlFor="menu-hamburguer">
