@@ -7,14 +7,14 @@ describe('<Heading />', () => {
   it('should render a white heading bu default', () => {
     renderWithTheme(<Heading>Won Games</Heading>)
     expect(screen.getByRole('heading', { name: /Won Games/i })).toHaveStyle({
-      color: '#222'
+      color: '#020B18'
     })
   })
 
   it('should render a white heading when color is passed', () => {
     renderWithTheme(<Heading color="white">Won Games</Heading>)
     expect(screen.getByRole('heading', { name: /Won Games/i })).toHaveStyle({
-      color: '#FCFCFC'
+      color: '#FFF'
     })
   })
 

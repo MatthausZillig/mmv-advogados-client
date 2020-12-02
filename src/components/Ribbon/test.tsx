@@ -13,13 +13,7 @@ describe('<Ribbon />', () => {
   it('should render with the primary color', () => {
     renderWithTheme(<Ribbon>Best Seller</Ribbon>)
     expect(screen.getByText(/Best Seller/i)).toHaveStyle({
-      backgroundColor: '#0E5BDF'
-    })
-  })
-  it('should render with the secondary color', () => {
-    renderWithTheme(<Ribbon color="secondary">Best Seller</Ribbon>)
-    expect(screen.getByText(/Best Seller/i)).toHaveStyle({
-      backgroundColor: '#0E5BDF'
+      backgroundColor: '#3CD3C1'
     })
   })
   it('should render with the normal size as default', () => {

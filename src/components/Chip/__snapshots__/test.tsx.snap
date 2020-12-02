@@ -2,11 +2,11 @@
 
 exports[`<Chip /> should render the chip 1`] = `
 .c0 {
-  color: #FCFCFC;
+  color: #FFF;
   font-size: 1rem;
   margin: 0px 8px 8px 0px;
   padding: 4px 8px;
-  background: #0E5BDF;
+  background: #0C4EC0;
   border-radius: 4px;
   width: auto;
   display: -webkit-box;

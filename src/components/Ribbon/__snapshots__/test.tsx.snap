@@ -13,8 +13,8 @@ exports[`<Ribbon /> should render the text correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   font-weight: 600;
-  color: #FCFCFC;
-  background-color: #0E5BDF;
+  color: #FFF;
+  background-color: #3CD3C1;
   font-size: 1.4rem;
   padding: 0 2.4rem;
   height: 3.6rem;
@@ -33,8 +33,8 @@ exports[`<Ribbon /> should render the text correctly 1`] = `
 }
 
 .c0::before {
-  border-left-color: #08347f;
-  border-top-color: #08347f;
+  border-left-color: #29b3a3;
+  border-top-color: #29b3a3;
 }
 
 .c0::before {
@@ -45,7 +45,7 @@ exports[`<Ribbon /> should render the text correctly 1`] = `
 
 <div
   class="c0"
-  color="secondary"
+  color="heading"
 >
   Best Seller
 </div>

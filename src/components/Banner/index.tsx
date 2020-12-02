@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Fade from 'react-reveal/Fade'
 
 import Ribbon, { RibbonColors, RibbonSizes } from 'components/Ribbon'
 import Button from 'components/Button'
@@ -45,13 +44,11 @@ const Banner = ({
       />
 
       <S.Caption>
-        <Fade left>
-          <S.Title>{title}</S.Title>
-          <S.Subtitle dangerouslySetInnerHTML={{ __html: subtitle }} />
-          <Button as="a" href={buttonLink} size="large">
-            {buttonLabel}
-          </Button>
-        </Fade>
+        <S.Title>{title}</S.Title>
+        <S.Subtitle dangerouslySetInnerHTML={{ __html: subtitle }} />
+        <Button as="a" href={buttonLink} size="large">
+          {buttonLabel}
+        </Button>
       </S.Caption>
     </S.Wrapper>
   )
