@@ -1,6 +1,9 @@
 import { BannerProps } from 'components/Banner'
-import BannerGrid, { BannerGridProps } from 'components/BannerGrid'
-import FeaturesArticles, { FeatureProps } from 'components/FeaturesArticles'
+import BannerGrid from 'components/BannerGrid'
+import { ImagesProps } from 'components/BannerGrid/ImagesTypes'
+import FeaturesArticles, {
+  FeaturesArticlesProps
+} from 'components/FeaturesArticles'
 import { HighlightProps } from 'components/Highlight'
 import MediaMatch from 'components/MediaMatch'
 
@@ -10,41 +13,20 @@ import BannerSlider from 'components/BannerSlider'
 import Footer from 'components/Footer'
 import Heading from 'components/Heading'
 import Menu from 'components/Menu'
-import Slider, { SliderSettings } from 'components/Slider'
 
 import * as S from './styles'
 
 export type HomeTemplateProps = {
   banners: BannerProps[]
-  bannerGrid: BannerGridProps[]
-  featureArticles: FeatureProps[]
+  bannerGrid: ImagesProps[]
+  featureArticles: FeaturesArticlesProps[]
   monacoHightlight: HighlightProps
   mirandaHightlight: HighlightProps
   vedanaHightlight: HighlightProps
-  zillig: HighlightProps
-  ligia: HighlightProps
-}
-
-const settings: SliderSettings = {
-  dots: true,
-  arrows: false,
-  infinite: false,
-
-  responsive: [
-    {
-      breakpoint: 1170,
-      settings: {
-        vertical: false,
-        verticalSwiping: false
-      }
-    }
-  ]
 }
 
 const Home = ({
   banners,
-  zillig,
-  ligia,
   bannerGrid,
   featureArticles,
   monacoHightlight
@@ -77,12 +59,7 @@ const Home = ({
         </Heading>
       </S.SectionHeadings>
       <S.SectionSocios>
-        <Slider settings={settings}>
-          <Hightlight {...monacoHightlight} />
-          <Hightlight {...zillig} />
-          <Hightlight {...ligia} />
-          <Hightlight {...zillig} />
-        </Slider>
+        <Hightlight {...monacoHightlight} />
         {/* <Hightlight {...mirandaHightlight} />
         <Hightlight {...vedanaHightlight} /> */}
       </S.SectionSocios>

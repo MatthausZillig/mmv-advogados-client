@@ -9,7 +9,7 @@ export type FeatureChips = {
   chip: string
 }
 
-export type FeaturesArticles = {
+export type FeaturesArticlesProps = {
   img: string
   title: string
   subtitle: string
@@ -18,7 +18,7 @@ export type FeaturesArticles = {
 }
 
 export type FeatureProps = {
-  items: FeaturesArticles[]
+  items: FeaturesArticlesProps[]
 }
 
 const FeaturesArticles = ({ items }: FeatureProps) => (
