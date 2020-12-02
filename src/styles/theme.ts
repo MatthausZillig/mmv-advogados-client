@@ -13,6 +13,7 @@
     normal: 400,
     bold: 600,
     sizes: {
+      xxsmall: '1rem',
       xsmall: '1.2rem',
       small: '1.4rem',
       medium: '1.6rem',
@@ -22,14 +23,18 @@
     }
   },
   colors: {
-    primary: '#1F0954',
-    secondary: '#3D7AFD',
-    lightBlue: '#26F7FD',
-    white: '#FAFAFA',
-    black: '#222',
-    lightGray: '#EAEAEA',
-    gray: '#8F8F8F',
-    darkGray: '#2E2F42'
+    primary: '#0E5BDF',
+    secondary: '#0C4EC0',
+    tertiary: '#6FA1F6',
+    lightBlue: '#E7EFFD',
+    darkBlue: '#0B44A8',
+    heading: '#3CD3C1',
+    white: '#FFF',
+    black: '#020B18',
+    lightGray: '#EAEEF3',
+    gray: '#B6C1D6',
+    darkGray: '#2E2F42',
+    mainBg: '#031430'
   },
   spacings: {
     xxsmall: '0.8rem',
