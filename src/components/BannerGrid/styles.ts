@@ -18,15 +18,10 @@ export const Wrapper = styled.section`
     column-gap: ${theme.spacings.small};
     row-gap: ${theme.spacings.medium};
     ${media.lessThan('medium')`
-    row-gap: ${theme.spacings.xxsmall};
-      grid-template-areas:
-        'one'
-        'two'
-        'tree'
-        'four'
-        'five'
-        'six';
-      grid-template-columns: 1fr;
+      display: flex;
+      overflow: hidden;
+      overflow-x: scroll;
+      height: 32rem;
     `}
   `}
 `
@@ -62,6 +57,8 @@ export const Image = styled.div<ImageProps>`
       opacity: 0;
     }
     ${media.lessThan('large')`
+      width: 100%;
+      height: 300px;
     ${RibbonStyles.Wrapper} {
       right: 0;
       &::before {
@@ -173,6 +170,10 @@ export const Caption = styled.div`
       position: absolute;
       bottom: 0;
       left: 0;
+    `}
+    ${media.lessThan('medium')`
+      width: 280px;
+      height: 100%;
     `}
   `}
 `

@@ -1,4 +1,5 @@
 import styled, { css, DefaultTheme } from 'styled-components'
+import { darken } from 'polished'
 import media from 'styled-media-query'
 import { MenuProps } from '.'
 
@@ -100,6 +101,7 @@ export const Input = styled.input`
 
     :checked ~ ul {
       opacity: 1;
+      width: 200px;
     }
 
     :checked ~ label span::before {
@@ -127,10 +129,11 @@ export const Ul = styled.ul`
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 0;
     transform: translate(-50%, 15%);
     list-style: none;
     opacity: 0;
-    transition: 0.25s 0.1s cubic-bezier(0, 1.07, 0, 1.02);
+    transition: all 0.25s 0.1s cubic-bezier(0, 1.07, 0, 1.02);
     a {
       display: block;
       margin-bottom: 40px;
@@ -155,11 +158,12 @@ export const MenuLink = styled.div`
     cursor: pointer;
     &:hover ${MenuItens} {
       opacity: 1;
-      transform: none;
-      transition: opacity 334ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      display: block;
+     transform: translate(-50% -50%)
+      transition: opacity 222ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
         transform 222ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
       transform-origin: 175px 0px;
-      background-color: ${theme.colors.lightBlue};
+      background-color: ${theme.colors.heading};
     }
     &:hover {
       color: ${theme.colors.secondary};
@@ -193,13 +197,12 @@ export const MenuWrapper = styled.div`
 `
 export const MenuItens = styled.div`
   ${({ theme }) => css`
-    opacity: 0;
+    display: none;
+    background-color: ${theme.colors.heading};
     position: absolute;
-    min-width: 130px;
-    width: 60px;
+    width: 130px;
     top: ${theme.spacings.large};
     z-index: 1;
-    background-color: ${theme.colors.lightBlue};
     box-shadow: 0 0.5rem 2rem 2px rgba(116, 123, 144, 0.09);
   `}
 `
@@ -218,10 +221,10 @@ export const SubItens = styled.a`
     text-decoration: none;
     display: block;
     text-align: left;
-    background-color: ${theme.colors.white};
+    background-color: ${theme.colors.lightBlue};
     font-size: ${theme.font.sizes.xsmall};
     &:hover {
-      background-color: ${theme.colors.lightBlue};
+      background-color: ${darken(0.1, theme.colors.lightBlue)};
     }
   `}
 `

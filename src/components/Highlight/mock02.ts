@@ -1,8 +1,8 @@
 ﻿export default {
   title: 'Conheça nossos sócios',
-  backgroundImage: '/img/office_02.jpg',
-  floatImage: '/img/vedana.png',
+  backgroundImage: '/img/office.jpg',
+  floatImage: '/img/zillig.png',
   buttonLabel: 'Saiba mais',
   buttonLink: '/socios',
-  alignment: 'left'
+  alignment: 'right'
 }

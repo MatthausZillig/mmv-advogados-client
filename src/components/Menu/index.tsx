@@ -34,25 +34,25 @@ const Menu = () => {
           </label>
           <S.Ul>
             <li>
-              <a href="#">Home</a>
+              <a href="/home">Home</a>
             </li>
             <li>
-              <a href="#">Escritório</a>
+              <a href="/escritorio">Escritório</a>
             </li>
             <li>
-              <a href="#">Áreas de atuação</a>
+              <a href="/areas">Áreas de atuação</a>
             </li>
             <li>
-              <a href="#">Sócios</a>
+              <a href="/">Sócios</a>
             </li>
             <li>
-              <a href="#">Trabalhe conosco</a>
+              <a href="/trabalhe-conosco">Trabalhe conosco</a>
             </li>
             <li>
-              <a href="#">Blog</a>
+              <a href="/blog">Blog</a>
             </li>
             <li>
-              <a href="#">Contato</a>
+              <a href="/contato">Contato</a>
             </li>
           </S.Ul>
         </MediaMatch>

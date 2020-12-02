@@ -28,8 +28,8 @@ const FeaturesArticles = ({ items }: FeatureProps) => (
       <Button withBorder>Veja todos</Button>
     </S.FeatureTitle>
     <S.FeatureCard data-testid="card">
-      {items.map((item) => (
-        <S.FeatureBox key={item.title}>
+      {items.map((item, index) => (
+        <S.FeatureBox key={index}>
           <div style={{ maxHeight: '300px' }}>
             <Image
               src={item.img}

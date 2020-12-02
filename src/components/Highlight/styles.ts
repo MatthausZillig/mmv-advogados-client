@@ -29,21 +29,25 @@ export const Wrapper = styled.section<WrapperProps>`
   ${({ backgroundImage, alignment }) => css`
     position: relative;
     background-image: url(${backgroundImage});
-    background-position: center center;
+    background-position: center;
     background-size: cover;
     height: 23rem;
     display: grid;
     grid-template-areas: 'floatimage content';
     grid-template-columns: 1.3fr 2fr;
+    &:hover ::after {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
     &::after {
       content: '';
       position: absolute;
+      bottom: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.8);
     }
     ${media.greaterThan('medium')`
-      height: 32rem;
+      height: 35rem;
     `}
 
     ${wrapperModifiers[alignment!]()}
@@ -55,10 +59,11 @@ export const FloatImage = styled.img`
     grid-area: floatimage;
     z-index: ${theme.layers.base};
     max-height: 23rem;
-    max-width: 100%;
+    max-width: 200px;
     align-self: end;
     ${media.greaterThan('medium')`
       max-height: 32rem;
+      max-width: 100%;
     `}
   `}
 `

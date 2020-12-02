@@ -64,7 +64,53 @@ export const SectionUpcoming = styled(Sections)`
   `}
 `
 
-export const SectionSocios = styled(Sections)``
+export const SectionSocios = styled(Sections)`
+  ${({ theme }) => css`
+    ${media.lessThan('medium')`
+      .slick-slide {
+        padding: 2rem;
+      }
+    `}
+    .slick-dots {
+      list-style: none;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      margin-top: ${theme.spacings.small};
+      li {
+        background: ${theme.colors.lightBlue};
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 ${theme.spacings.xxsmall};
+        cursor: pointer;
+        &.slick-active {
+          background: ${theme.colors.heading};
+        }
+      }
+      button {
+        opacity: 0;
+        width: 1.2rem;
+        height: 1.2rem;
+        cursor: pointer;
+      }
+    }
+    ${media.greaterThan('large')`
+      .slick-dots {
+        flex-direction: row;
+        height: 100%;
+        top: 0;
+        margin: 0;
+        li {
+          margin: ${theme.spacings.small} ${theme.spacings.xsmall};
+        }
+      }
+    `}
+  `}
+`
 
 export const SectionFooter = styled.section`
   ${({ theme }) => css`

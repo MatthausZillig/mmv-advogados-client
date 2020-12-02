@@ -10,6 +10,7 @@ import BannerSlider from 'components/BannerSlider'
 import Footer from 'components/Footer'
 import Heading from 'components/Heading'
 import Menu from 'components/Menu'
+import Slider, { SliderSettings } from 'components/Slider'
 
 import * as S from './styles'
 
@@ -20,10 +21,30 @@ export type HomeTemplateProps = {
   monacoHightlight: HighlightProps
   mirandaHightlight: HighlightProps
   vedanaHightlight: HighlightProps
+  zillig: HighlightProps
+  ligia: HighlightProps
+}
+
+const settings: SliderSettings = {
+  dots: true,
+  arrows: false,
+  infinite: false,
+
+  responsive: [
+    {
+      breakpoint: 1170,
+      settings: {
+        vertical: false,
+        verticalSwiping: false
+      }
+    }
+  ]
 }
 
 const Home = ({
   banners,
+  zillig,
+  ligia,
   bannerGrid,
   featureArticles,
   monacoHightlight
@@ -56,7 +77,12 @@ const Home = ({
         </Heading>
       </S.SectionHeadings>
       <S.SectionSocios>
-        <Hightlight {...monacoHightlight} />
+        <Slider settings={settings}>
+          <Hightlight {...monacoHightlight} />
+          <Hightlight {...zillig} />
+          <Hightlight {...ligia} />
+          <Hightlight {...zillig} />
+        </Slider>
         {/* <Hightlight {...mirandaHightlight} />
         <Hightlight {...vedanaHightlight} /> */}
       </S.SectionSocios>

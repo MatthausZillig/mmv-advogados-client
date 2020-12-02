@@ -2,7 +2,7 @@
   {
     img: 'https://source.unsplash.com/user/willianjusten/1042x577',
     title: 'Direito Empresarial',
-    subtitle: 'Assessoria Consultiva e Preventiva',
+    subtitle: 'Assessoria Jurídica',
     imgLabel: 'Saiba mais'
   },
   {

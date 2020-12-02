@@ -34,7 +34,7 @@
     lightGray: '#EAEEF3',
     gray: '#B6C1D6',
     darkGray: '#2E2F42',
-    mainBg: '#062760'
+    mainBg: '#031430'
   },
   spacings: {
     xxsmall: '0.8rem',
