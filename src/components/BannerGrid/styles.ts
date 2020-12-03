@@ -174,7 +174,7 @@ export const Caption = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    ${media.greaterThan('medium')`
+    ${media.greaterThan('large')`
       border-radius: 0 0 ${theme.border.radius} ${theme.border.radius};
       padding: ${theme.spacings.medium};
       position: absolute;
