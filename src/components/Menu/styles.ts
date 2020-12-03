@@ -37,7 +37,6 @@ export const Wrapper = styled.menu<MenuProps>`
     ${inScroll && wrapperModifiers.inScroll(theme)};
     ${media.lessThan('medium')`
     position: fixed;
-      width: 375px;
       justify-content: center;
       svg {
         width: 275px;
