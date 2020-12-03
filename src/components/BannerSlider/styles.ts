@@ -21,7 +21,7 @@ export const Wrapper = styled.section`
         margin: 0 ${theme.spacings.xxsmall};
         cursor: pointer;
         &.slick-active {
-          background: ${theme.colors.primary};
+          background: ${theme.colors.heading};
         }
       }
       button {

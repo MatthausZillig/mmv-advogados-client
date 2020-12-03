@@ -10,6 +10,7 @@ export type MenuProps = {
 
 const Menu = () => {
   const [navbar, setNavbar] = useState(false)
+
   if (typeof window !== 'undefined') {
     const changeBackground = () => {
       if (window.scrollY >= 60) {
@@ -24,7 +25,7 @@ const Menu = () => {
   return (
     <S.Wrapper data-testid="menu" inScroll={navbar}>
       <S.MenuWrapper>
-        <Logo quality={100} />
+        <Logo width={400} />
         <MediaMatch lessThan="medium">
           <S.Input id="menu-hamburguer" type="checkbox" />
           <label htmlFor="menu-hamburguer">

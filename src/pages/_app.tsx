@@ -9,13 +9,14 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>React Avançado - Boilerplate</title>
-        <link rel="shortcut icon" href="/img/icon-512.png" />
-        <link rel="apple-touch-icon" href="/img/icon-512.png" />
+        <title>Monaco, Mirando & Vedana</title>
+        <link rel="shortcut icon" href="/img/favicon.png" />
+        <link rel="apple-touch-icon" href="/img/favicon.png" />
         <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#6FA1F6"></meta>
         <meta
           name="description"
-          content="A simple project starter to work with TypeScript, React, NextJS and Styled Components"
+          content="Competência técnica na área Jurídica e no atendimento aos clientes. Clique Aqui e escloha a Monaco, Miranda & Vedana Advogados Associados"
         />
       </Head>
       <GlobalStyles />
