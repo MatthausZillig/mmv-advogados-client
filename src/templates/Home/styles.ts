@@ -23,10 +23,10 @@ export const SectionBanner = styled.section`
   ${({ theme }) => css`
     margin: ${theme.spacings.large} calc(-${theme.grid.gutter} / 2);
     ${media.lessThan('medium')`
-      margin-top: 100px;
+      margin-top: 16rem;
     `}
     ${media.greaterThan('medium')`
-      margin: ${theme.spacings.large} 0;
+      margin: 20rem 0 ${theme.spacings.large};
       position: relative;
       z-index: ${theme.layers.base};
     `}
