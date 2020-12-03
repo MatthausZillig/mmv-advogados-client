@@ -23,11 +23,13 @@ const Highlight = ({
   <S.Wrapper alignment={alignment} backgroundImage={backgroundImage}>
     {!!floatImage && <S.FloatImage src={floatImage} alt={title} />}
     <S.Content>
-      <S.Title>{title}</S.Title>
-      <S.Subtitle>{subtitle}</S.Subtitle>
-      <Button size="small" as="a" href={buttonLink}>
-        {buttonLabel}
-      </Button>
+      <S.ContentBox>
+        <S.Title>{title}</S.Title>
+        <S.Subtitle>{subtitle}</S.Subtitle>
+        <Button size="small" as="a" href={buttonLink}>
+          {buttonLabel}
+        </Button>
+      </S.ContentBox>
     </S.Content>
   </S.Wrapper>
 )

@@ -10,8 +10,12 @@ const wrapperModifiers = {
     position: fixed;
     top: 0;
     color: ${theme.colors.black};
+    transform: translate(0%, 0%);
     svg {
-      width: 275px;
+      width: 280px;
+    }
+    ${TopBar} {
+      transform: translate(-10%, -10%);
     }
   `,
   inScrollMenuLink: (theme: DefaultTheme) => css`
@@ -22,18 +26,39 @@ const wrapperModifiers = {
   `
 }
 
+export const TopBar = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    height: 40px;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    color: ${theme.colors.white};
+    transition: transform 0.1 ease-in-out;
+    z-index: ${theme.layers.alwaysOnTop};
+    background-color: ${theme.colors.primary};
+    padding-left: ${theme.spacings.medium};
+    padding-right: ${theme.spacings.small};
+  `}
+`
+
 export const Wrapper = styled.menu<MenuProps>`
   ${({ theme, inScroll }) => css`
     color: ${theme.colors.black};
     width: 100%;
-    height: 10rem;
+    height: 12rem;
     display: flex;
-    top: 0;
+    position: fixed;
+    top: 40px;
     align-items: center;
     justify-content: space-evenly;
     z-index: ${theme.layers.alwaysOnTop};
     background: ${theme.colors.white};
     box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
     ${inScroll && wrapperModifiers.inScroll(theme)};
     ${media.lessThan('medium')`
     position: fixed;

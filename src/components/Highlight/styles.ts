@@ -38,13 +38,16 @@ export const Wrapper = styled.section<WrapperProps>`
     &:hover ::after {
       background-color: rgba(0, 0, 0, 0.8);
     }
+    &:hover ${ContentBox} {
+      background-color: rgba(0, 0, 0, 0);
+    }
     &::after {
       content: '';
       position: absolute;
       bottom: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(0, 0, 0, 0.2);
     }
     ${media.greaterThan('medium')`
       height: 35rem;
@@ -77,8 +80,30 @@ export const Content = styled.div`
       align-self: end;
       padding: ${theme.spacings.large};
     `}
+    ${media.lessThan('medium')`
+      padding: 1.6rem 0 0 1.6rem;
+    `}
   `}
 `
+
+export const ContentBox = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: ${theme.spacings.small};
+    &:hover {
+      background-color: rgba(0, 0, 0, 0);
+    }
+    ${media.lessThan('medium')`
+      width: 100%;
+    `}
+  `}
+`
+
 export const Title = styled.h2`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.large};

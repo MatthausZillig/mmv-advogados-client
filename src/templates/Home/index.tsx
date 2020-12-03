@@ -24,8 +24,6 @@ export type HomeTemplateProps = {
   monacoHightlight: HighlightProps
   mirandaHightlight: HighlightProps
   vedanaHightlight: HighlightProps
-  zillig: HighlightProps
-  ligia: HighlightProps
 }
 
 const settings: SliderSettings = {
@@ -48,9 +46,7 @@ const Home = ({
   banners,
   bannerGrid,
   featureArticles,
-  monacoHightlight,
-  zillig,
-  ligia
+  monacoHightlight
 }: HomeTemplateProps) => (
   <section>
     <Menu />
@@ -82,9 +78,8 @@ const Home = ({
       <S.SectionSocios>
         <Slider settings={settings}>
           <Hightlight {...monacoHightlight} />
-          <Hightlight {...zillig} />
-          <Hightlight {...ligia} />
-          <Hightlight {...zillig} />
+          <Hightlight {...monacoHightlight} />
+          <Hightlight {...monacoHightlight} />
         </Slider>
       </S.SectionSocios>
     </Container>

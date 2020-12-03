@@ -15,7 +15,7 @@ const Sections = styled.section`
         margin-left: calc(-${theme.grid.gutter} / 2);
       `}
     }
-    margin-bottom: calc(${theme.spacings.large} * 2);
+    margin-bottom: calc(${theme.spacings.small} * 2);
   `}
 `
 
@@ -54,7 +54,11 @@ export const SectionNews = styled(Sections)`
 
 export const SectionMostPopular = styled(Sections)``
 
-export const SectionHeadings = styled(Sections)``
+export const SectionHeadings = styled(Sections)`
+  ${({ theme }) => css`
+    margin-bottom: calc(${theme.spacings.small} * 2);
+  `}
+`
 
 export const SectionUpcoming = styled(Sections)`
   ${({ theme }) => css`
@@ -71,7 +75,7 @@ export const SectionSocios = styled(Sections)`
         padding: 2rem;
       }
 
-      margin-bottom: calc(${theme.spacings.xxlarge} * 2);
+      margin-bottom: calc(${theme.spacings.medium} * 2);
 
     `}
     .slick-dots {
