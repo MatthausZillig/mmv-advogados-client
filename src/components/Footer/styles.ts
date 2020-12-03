@@ -25,10 +25,15 @@ export const Content = styled.div`
 
 export const Column = styled.div`
   ${({ theme }) => css`
+    ${media.lessThan('medium')`
+      a {
+        height: 48px;
+      }
+  `}
     a,
     span {
       display: block;
-      color: ${theme.colors.gray};
+      color: ${theme.colors.mainBg};
       text-decoration: none;
       margin-bottom: ${theme.spacings.xxsmall};
       font-size: ${theme.font.sizes.small};

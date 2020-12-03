@@ -59,6 +59,10 @@ export const Image = styled.div<ImageProps>`
     ${media.lessThan('large')`
       width: 100%;
       height: 300px;
+      h2,
+      h3 {
+        font-size: 20px;
+      }
     ${RibbonStyles.Wrapper} {
       right: 0;
       &::before {
@@ -82,6 +86,12 @@ export const Image = styled.div<ImageProps>`
 
 export const Image2 = styled(Image)`
   grid-area: two;
+  ${media.lessThan('medium')`
+  h2,
+  h3 {
+    font-size: 20px;
+  }
+  `}
 `
 
 export const Image3 = styled(Image)`
@@ -154,7 +164,7 @@ export const Caption = styled.div`
   ${({ theme }) => css`
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
     &:hover {
       background-color: rgba(0, 0, 0, 0.9);
     }

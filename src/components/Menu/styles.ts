@@ -10,9 +10,8 @@ const wrapperModifiers = {
     position: fixed;
     top: 0;
     color: ${theme.colors.black};
-    img {
-      width: 80%;
-      height: 80%;
+    svg {
+      width: 275px;
     }
   `,
   inScrollMenuLink: (theme: DefaultTheme) => css`
@@ -40,6 +39,9 @@ export const Wrapper = styled.menu<MenuProps>`
     position: fixed;
       width: 375px;
       justify-content: center;
+      svg {
+        width: 275px;
+      }
       ${MenuNav} {
         display: none;
       }
