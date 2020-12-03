@@ -46,10 +46,33 @@ export const Column = styled.div`
 
 export const Copyright = styled.div`
   ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     color: ${theme.colors.gray};
     font-size: ${theme.font.sizes.xsmall};
     margin-top: ${theme.spacings.large};
     margin-bottom: ${theme.spacings.medium};
     text-align: center;
+    ${media.lessThan('medium')`
+      flex-direction: Column;
+    `}
+  `}
+`
+export const Baw = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 130px;
+    transition: fill 0.1s ease;
+    &:hover g polygon {
+      fill: #ff6495;
+    }
+    ${media.lessThan('medium')`
+      margin-top: ${theme.spacings.small};
+    `}
+    cursor: pointer;
   `}
 `
