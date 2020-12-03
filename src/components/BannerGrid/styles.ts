@@ -59,6 +59,7 @@ export const Image = styled.div<ImageProps>`
     ${media.lessThan('large')`
       width: 100%;
       height: 300px;
+      margin: 0 1rem 0 0;
       h2,
       h3 {
         font-size: 20px;
