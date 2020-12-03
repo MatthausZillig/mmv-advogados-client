@@ -70,6 +70,9 @@ export const SectionSocios = styled(Sections)`
       .slick-slide {
         padding: 2rem;
       }
+
+      margin-bottom: calc(${theme.spacings.xxlarge} * 2);
+
     `}
     .slick-dots {
       list-style: none;

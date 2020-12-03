@@ -31,22 +31,25 @@ export const FeatureBox = styled.div`
   flex-direction: column;
   padding-bottom: 16px;
   overflow: hidden;
+  ${media.lessThan('medium')`
+    width: 100%;
+  `}
   img {
     object-fit: cover;
     width: 538px;
     height: 300px;
     transform: scale(1);
     ${media.lessThan('medium')`
-    width: 300px;
+    width: 100%;
   `}
     &:hover {
       transition: transform 450ms ease-out;
       transform: scale(1.2);
     }
   }
-  ${media.lessThan('medium')`
+  /* ${media.lessThan('medium')`
     width: 300px;
-  `}
+  `} */
 `
 
 export const Image = styled.img`
@@ -55,7 +58,7 @@ export const Image = styled.img`
   height: 300px;
   transform: scale(1);
   ${media.lessThan('medium')`
-    width: 300px;
+    width: 100%;
   `}
   &:hover {
     transition: transform 450ms ease-out;
@@ -72,9 +75,9 @@ export const Card = styled.div`
   box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.1);
   margin-top: -48px;
   border-radius: 8px;
-  ${media.lessThan('medium')`
+  /* ${media.lessThan('medium')`
     width: 300px;
-  `}
+  `} */
 `
 
 export const FeatureCard = styled.div`
