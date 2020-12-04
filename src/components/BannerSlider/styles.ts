@@ -4,6 +4,7 @@ import * as BannerStyles from 'components/Banner/styles'
 
 export const Wrapper = styled.section`
   ${({ theme }) => css`
+    cursor: grab;
     .slick-dots {
       list-style: none;
       display: flex !important;
