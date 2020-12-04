@@ -35,6 +35,7 @@ export const Wrapper = styled.section<WrapperProps>`
     display: grid;
     grid-template-areas: 'floatimage content';
     grid-template-columns: 1.3fr 2fr;
+    cursor: grab;
     &:hover ::after {
       background-color: rgba(0, 0, 0, 0.8);
     }
