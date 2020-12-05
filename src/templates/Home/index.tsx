@@ -13,6 +13,7 @@ import BannerSlider from 'components/BannerSlider'
 import Footer from 'components/Footer'
 import Heading from 'components/Heading'
 import Menu from 'components/Menu'
+import CookiePolicy from 'components/CookiePolicy'
 import Slider, { SliderSettings } from 'components/Slider'
 
 import * as S from './styles'
@@ -97,6 +98,7 @@ const Home = ({
         <Footer />
       </Container>
     </S.SectionFooter>
+    <CookiePolicy />
   </section>
 )
 
