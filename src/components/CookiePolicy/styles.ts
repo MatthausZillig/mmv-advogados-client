@@ -1,8 +1,8 @@
-import styled, { css, DefaultTheme } from 'styled-components'
+import styled, { css } from 'styled-components'
 import { CookieProps } from '.'
 
 const WrapperModifiers = {
-  isClose: (theme: DefaultTheme) => css`
+  isClose: () => css`
     display: none;
     color: #fff;
   `
