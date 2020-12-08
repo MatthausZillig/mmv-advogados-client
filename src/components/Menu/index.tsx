@@ -29,7 +29,7 @@ const Menu = () => {
     <>
       <S.TopBar>
         <p>Contato:</p>
-        <a>+55 11 2359-9600</a>
+        <a href="tel:+55-11-2359-9600">+55 11 2359-9600</a>
       </S.TopBar>
       <S.Wrapper data-testid="menu" inScroll={navbar}>
         <S.MenuWrapper>
