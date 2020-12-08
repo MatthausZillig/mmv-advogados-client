@@ -1,4 +1,5 @@
 import * as S from './styles'
+import Image from 'next/image'
 import Button from 'components/Button'
 import { ImagesProps } from './ImagesTypes'
 
@@ -9,7 +10,13 @@ export type BannerGridProps = {
 function BannerGrid({ items }: BannerGridProps) {
   return (
     <S.Wrapper>
-      <S.Image src={items[0].img} role="img" aria-label={items[0].title}>
+      <S.Image>
+        <Image
+          src={items[0].img}
+          role="img"
+          aria-label={items[0].title}
+          unsized
+        />
         <S.Caption>
           <S.Title>{items[0].title}</S.Title>
           <S.Subtitle dangerouslySetInnerHTML={{ __html: items[0].subtitle }} />
@@ -19,7 +26,13 @@ function BannerGrid({ items }: BannerGridProps) {
         </S.Caption>
       </S.Image>
 
-      <S.Image2 src={items[1].img} role="img" aria-label={items[1].title}>
+      <S.Image2>
+        <Image
+          src={items[1].img}
+          role="img"
+          aria-label={items[1].title}
+          unsized
+        />
         <S.Caption>
           <S.Title>{items[1].title}</S.Title>
           <S.Subtitle dangerouslySetInnerHTML={{ __html: items[1].subtitle }} />
@@ -29,7 +42,13 @@ function BannerGrid({ items }: BannerGridProps) {
         </S.Caption>
       </S.Image2>
 
-      <S.Image3 src={items[2].img} role="img" aria-label={items[2].title}>
+      <S.Image3>
+        <Image
+          src={items[2].img}
+          role="img"
+          aria-label={items[2].title}
+          unsized
+        />
         <S.Caption>
           <S.Title>{items[2].title}</S.Title>
           <S.Subtitle dangerouslySetInnerHTML={{ __html: items[2].subtitle }} />
@@ -39,7 +58,13 @@ function BannerGrid({ items }: BannerGridProps) {
         </S.Caption>
       </S.Image3>
 
-      <S.Image4 src={items[3].img} role="img" aria-label={items[3].title}>
+      <S.Image4>
+        <Image
+          src={items[3].img}
+          role="img"
+          aria-label={items[3].title}
+          unsized
+        />
         <S.Caption>
           <S.Title>{items[3].title}</S.Title>
           <S.Subtitle dangerouslySetInnerHTML={{ __html: items[3].subtitle }} />
@@ -49,7 +74,13 @@ function BannerGrid({ items }: BannerGridProps) {
         </S.Caption>
       </S.Image4>
 
-      <S.Image5 src={items[4].img} role="img" aria-label={items[4].title}>
+      <S.Image5>
+        <Image
+          src={items[4].img}
+          role="img"
+          aria-label={items[4].title}
+          unsized
+        />
         <S.Caption>
           <S.Title>{items[4].title}</S.Title>
           <S.Subtitle dangerouslySetInnerHTML={{ __html: items[4].subtitle }} />
@@ -59,7 +90,7 @@ function BannerGrid({ items }: BannerGridProps) {
         </S.Caption>
       </S.Image5>
 
-      <S.Image6 src={items[5].img} role="img" aria-label={items[5].title}>
+      <S.Image6>
         <S.Caption>
           <S.Title>{items[5].title}</S.Title>
           <S.Subtitle dangerouslySetInnerHTML={{ __html: items[5].subtitle }} />
