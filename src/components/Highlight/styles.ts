@@ -26,17 +26,15 @@ const wrapperModifiers = {
 }
 
 export const Wrapper = styled.section<WrapperProps>`
-  ${({ backgroundImage, alignment }) => css`
+  ${({ alignment }) => css`
     position: relative;
-    /* background-image: url(${backgroundImage});
-    background-position: center;
-    background-size: cover; */
     height: 23rem;
     display: grid;
     grid-template-areas: 'floatimage content';
     grid-template-columns: 1.3fr 2fr;
     .backgroundImage {
       width: 100%;
+      height: 100%;
       position: absolute;
       object-fit: cover;
       top: 0;
@@ -69,7 +67,10 @@ export const FloatImage = styled.div`
     grid-area: floatimage;
     z-index: ${theme.layers.base};
     align-self: end;
-    margin-bottom: -60px;
+    margin-bottom: -4px;
+    ${media.greaterThan('medium')`
+        margin-bottom: -60px;
+    `}
     .floatImage {
       max-height: 23rem;
       max-width: 200px;

@@ -46,7 +46,9 @@ const FeaturesArticles = ({ items }: FeatureProps) => (
         </S.FeatureBox>
       ))}
       <MediaMatch lessThan="medium">
-        <Button>Veja todos</Button>
+        <Button as="a" href="/blog">
+          Veja todos
+        </Button>
       </MediaMatch>
     </S.FeatureCard>
   </S.Wrapper>

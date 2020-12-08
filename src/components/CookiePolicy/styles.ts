@@ -29,12 +29,24 @@ export const Wrapper = styled.main<CookieProps>`
       margin: 0;
     }
     ${media.lessThan('medium')`
-      width: 320px;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
       height: 200px;
-      margin: 1rem;
-      right: 0;
+      left: 0;
       bottom: 0;
       padding: ${theme.spacings.xsmall};
     `}
+  `}
+`
+
+export const WrapperButtons = styled.div`
+  ${({ theme }) => css`
+    display: 'flex';
+    justify-content: 'flex-start';
+    width: '100%';
+    button {
+      margin-right: ${theme.spacings.medium};
+    }
   `}
 `

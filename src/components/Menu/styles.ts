@@ -38,6 +38,9 @@ export const TopBar = styled.div`
     justify-content: flex-end;
     align-items: center;
     p {
+      ${media.greaterThan('medium')`
+        display: none;
+      `}
       margin-right: ${theme.spacings.xxsmall};
     }
     color: ${theme.colors.white};
