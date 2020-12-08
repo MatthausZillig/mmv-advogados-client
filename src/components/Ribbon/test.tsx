@@ -20,7 +20,7 @@ describe('<Ribbon />', () => {
     renderWithTheme(<Ribbon>Best Seller</Ribbon>)
     expect(screen.getByText(/Best Seller/i)).toHaveStyle({
       height: '3.6rem',
-      fontSize: '1.4rem'
+      fontSize: '1.8rem'
     })
   })
   it('should render with the small size', () => {

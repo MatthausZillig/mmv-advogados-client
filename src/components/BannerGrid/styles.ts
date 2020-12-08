@@ -40,12 +40,37 @@ export const WrapperImage = styled.main`
   `}
 `
 
-// type ImageProps = {
-//   src: string
-// }
+export const Caption = styled.div`
+  ${({ theme }) => css`
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+    position: relative;
+    padding: ${theme.spacings.small};
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    ${media.greaterThan('large')`
+      padding: ${theme.spacings.medium};
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    `}
+    ${media.lessThan('medium')`
+
+      width: 280px;
+      height: 100%;
+    `}
+  `}
+`
+
 export const Image = styled.div`
   ${({ theme }) => css`
-    border-radius: 0 0 ${theme.border.radius} ${theme.border.radius};
     position: relative;
     &:hover {
       background-color: rgba(0, 0, 0, 0.7);
@@ -89,6 +114,7 @@ export const Image = styled.div`
 `
 
 export const Image2 = styled(Image)`
+  position: relative;
   grid-area: two;
   ${media.lessThan('medium')`
   h2,
@@ -99,98 +125,41 @@ export const Image2 = styled(Image)`
 `
 
 export const Image3 = styled(Image)`
+  position: relative;
   h2,
   h3 {
     font-size: 20px;
   }
   grid-area: tree;
-  &:hover {
-    h2,
-    h3 {
-      opacity: 0;
-      height: 0;
-    }
-  }
-  h2,
-  h3 {
-    opacity: 1;
-  }
 `
 
 export const Image4 = styled(Image)`
+  position: relative;
   grid-area: four;
   h2,
   h3 {
     font-size: 20px;
   }
-  &:hover {
-    h2,
-    h3 {
-      opacity: 0;
-      height: 0;
-    }
-  }
-  h2,
-  h3 {
-    opacity: 1;
-  }
 `
 
 export const Image5 = styled(Image)`
+  position: relative;
   grid-area: five;
   h2,
   h3 {
     font-size: 20px;
-  }
-  &:hover {
-    h2,
-    h3 {
-      opacity: 0;
-      height: 0;
-    }
-  }
-  h2,
-  h3 {
-    opacity: 1;
   }
 `
 
 export const Image6 = styled(Image)`
   grid-area: six;
   background-color: rgba(0, 0, 0, 0.6);
-  background-image: none;
 
   a {
     opacity: 1;
   }
 `
-export const Caption = styled.div`
-  ${({ theme }) => css`
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.9);
-    }
-    padding: ${theme.spacings.small};
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    ${media.greaterThan('large')`
-      border-radius: 0 0 ${theme.border.radius} ${theme.border.radius};
-      padding: ${theme.spacings.medium};
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    `}
-    ${media.lessThan('medium')`
-      width: 280px;
-      height: 100%;
-    `}
-  `}
-`
+
 export const Title = styled.h2`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.large};

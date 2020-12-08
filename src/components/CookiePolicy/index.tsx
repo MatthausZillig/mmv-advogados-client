@@ -22,18 +22,12 @@ const CookiePolicy = () => {
           Ao continuar navegando você concorda com a política de privacidade.
         </p>
       </div>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-evenly',
-          width: '100%'
-        }}
-      >
+      <S.WrapperButtons>
         <Button onClick={handleClose}>Aceitar</Button>
         <Button withBorder onClick={handleClose}>
           Fechar
         </Button>
-      </div>
+      </S.WrapperButtons>
     </S.Wrapper>
   )
 }
