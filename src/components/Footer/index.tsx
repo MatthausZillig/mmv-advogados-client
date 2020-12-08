@@ -12,7 +12,9 @@ const Footer = () => (
           contato
         </Heading>
 
-        <a href="mailto:sac@wongames.com">atendimento@mmvadvogados.com.br</a>
+        <a href="mailto:atendimento@mmvadvogados.com.br">
+          atendimento@mmvadvogados.com.br
+        </a>
         <a>+55 11 2359-9600</a>
       </S.Column>
 
@@ -23,28 +25,21 @@ const Footer = () => (
 
         <nav aria-labelledby="social media">
           <a
-            href="https://www.instagram.com/won-games"
+            href="https://www.instagram.com/vedana.advogados/?igshid=3y0t00iyw1y2"
             target="_blank"
             rel="noopenner, noreferrer"
           >
             Instagram
           </a>
           <a
-            href="https://www.twitter.com/won-games"
-            target="_blank"
-            rel="noopenner, noreferrer"
-          >
-            Twitter
-          </a>
-          <a
-            href="https://www.youtube.com/won-games"
+            href="https://www.linkedin.com/company/monaco-miranda-vedana-&-caroni-reis/"
             target="_blank"
             rel="noopenner, noreferrer"
           >
             Linkedin
           </a>
           <a
-            href="https://www.facebook.com/won-games"
+            href="https://www.facebook.com/MMVAdvogados"
             target="_blank"
             rel="noopenner, noreferrer"
           >
@@ -63,10 +58,16 @@ const Footer = () => (
             <a>Home</a>
           </Link>
           <Link href="/games">
-            <a>Store</a>
+            <a>Escritório</a>
           </Link>
-          <Link href="/search">
-            <a>Buscar</a>
+          <Link href="/areas">
+            <a>Áreas de atuação</a>
+          </Link>
+          <Link href="/advogados">
+            <a>Advogados</a>
+          </Link>
+          <Link href="/advogados">
+            <a>Blog</a>
           </Link>
         </nav>
       </S.Column>

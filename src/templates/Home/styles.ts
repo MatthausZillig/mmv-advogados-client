@@ -52,6 +52,21 @@ export const SectionNews = styled(Sections)`
   `}
 `
 
+export const SectionOurStory = styled(SectionNews)`
+  ${({ theme }) => css`
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-color: #fff;
+    ${media.lessThan('medium')`
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+    ${HeadingStyles.Wrapper} {
+          color: ${theme.colors.black};
+        }
+    `}
+  `}
+`
+
 export const SectionMostPopular = styled(Sections)``
 
 export const SectionHeadings = styled(Sections)`
@@ -106,6 +121,8 @@ export const SectionSocios = styled(Sections)`
       }
     }
     ${media.greaterThan('large')`
+    margin-bottom: calc(6.4rem * 2);
+
       .slick-dots {
         flex-direction: row;
         height: 100%;

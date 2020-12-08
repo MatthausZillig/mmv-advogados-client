@@ -8,11 +8,13 @@ import { HighlightProps } from 'components/Highlight'
 import MediaMatch from 'components/MediaMatch'
 
 import { Container } from 'components/Container'
+import OurStory from 'components/OurStory'
 import Hightlight from 'components/Highlight'
 import BannerSlider from 'components/BannerSlider'
 import Footer from 'components/Footer'
 import Heading from 'components/Heading'
 import Menu from 'components/Menu'
+import CookiePolicy from 'components/CookiePolicy'
 import Slider, { SliderSettings } from 'components/Slider'
 
 import * as S from './styles'
@@ -83,7 +85,16 @@ const Home = ({
         </Slider>
       </S.SectionSocios>
     </Container>
-
+    <S.SectionOurStory>
+      <Container>
+        <S.SectionHeadings>
+          <Heading color="white" lineColor="primary" lineLeft>
+            Por que escolher nosso escritório?
+          </Heading>
+        </S.SectionHeadings>
+        <OurStory />
+      </Container>
+    </S.SectionOurStory>
     <Container>
       <S.SectionHeadings>
         <Heading color="white" lineColor="heading" lineLeft>
@@ -97,6 +108,7 @@ const Home = ({
         <Footer />
       </Container>
     </S.SectionFooter>
+    <CookiePolicy />
   </section>
 )
 

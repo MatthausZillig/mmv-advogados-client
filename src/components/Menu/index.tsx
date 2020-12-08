@@ -24,11 +24,14 @@ const Menu = () => {
 
   return (
     <>
-      <S.TopBar>+55 11 2359-9600</S.TopBar>
+      <S.TopBar>
+        <p>Contato:</p>
+        <a>+55 11 2359-9600</a>
+      </S.TopBar>
       <S.Wrapper data-testid="menu" inScroll={navbar}>
         <S.MenuWrapper>
           <Logo width={400} />
-          <MediaMatch lessThan="medium">
+          <MediaMatch lessThan="large">
             <S.Input id="menu-hamburguer" type="checkbox" />
             <label htmlFor="menu-hamburguer">
               <S.MenuMobile>
