@@ -40,11 +40,11 @@ export const WrapperImage = styled.main`
   `}
 `
 
-type ImageProps = {
-  src: string
-}
-export const Image = styled.div<ImageProps>`
-  ${({ theme, src }) => css`
+// type ImageProps = {
+//   src: string
+// }
+export const Image = styled.div`
+  ${({ theme }) => css`
     border-radius: 0 0 ${theme.border.radius} ${theme.border.radius};
     position: relative;
     &:hover {
@@ -78,10 +78,13 @@ export const Image = styled.div<ImageProps>`
     width: 100%;
     height: 100%;
     grid-area: one;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
     background-color: ${theme.colors.lightGray};
-    background-image: url(${src});
-    background-position: center center;
-    background-size: cover;
   `}
 `
 
