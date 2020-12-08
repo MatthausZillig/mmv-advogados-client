@@ -12,7 +12,7 @@ export type ButtonProps = {
   withBorder?: boolean
   icon?: JSX.Element
   as?: React.ElementType
-  onClick?: () => (event: React.MouseEvent<HTMLButtonElement>) => void
+  onClick?: () => void
 } & ButtonTypes
 
 const Button = ({
