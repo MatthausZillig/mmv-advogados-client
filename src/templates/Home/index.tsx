@@ -88,7 +88,7 @@ const Home = ({
     <S.SectionOurStory>
       <Container>
         <S.SectionHeadings>
-          <Heading color="white" lineColor="heading" lineLeft>
+          <Heading color="white" lineColor="primary" lineLeft>
             Por que escolher nosso escritório?
           </Heading>
         </S.SectionHeadings>

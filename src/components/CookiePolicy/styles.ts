@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 import { CookieProps } from '.'
 
 const WrapperModifiers = {
@@ -23,9 +24,17 @@ export const Wrapper = styled.main<CookieProps>`
     height: 200px;
     z-index: ${theme.layers.alwaysOnTop};
     background: ${theme.colors.lightBlue};
-    ${!!close && WrapperModifiers.isClose(theme)}
+    ${!!close && WrapperModifiers.isClose()}
     p {
       margin: 0;
     }
+    ${media.lessThan('medium')`
+      width: 320px;
+      height: 200px;
+      margin: 1rem;
+      right: 0;
+      bottom: 0;
+      padding: ${theme.spacings.xsmall};
+    `}
   `}
 `

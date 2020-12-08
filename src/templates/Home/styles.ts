@@ -54,8 +54,8 @@ export const SectionNews = styled(Sections)`
 
 export const SectionOurStory = styled(SectionNews)`
   ${({ theme }) => css`
-    padding-top: 17rem;
-    padding-bottom: 17rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
     background-color: #fff;
     ${media.lessThan('medium')`
     padding-top: 8rem;

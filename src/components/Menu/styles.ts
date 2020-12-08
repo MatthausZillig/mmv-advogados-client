@@ -16,6 +16,7 @@ const wrapperModifiers = {
     }
     ${TopBar} {
       transform: translate(-10%, -10%);
+      display: none;
     }
   `,
   inScrollMenuLink: (theme: DefaultTheme) => css`
@@ -36,8 +37,11 @@ export const TopBar = styled.div`
     width: 100%;
     justify-content: flex-end;
     align-items: center;
+    p {
+      margin-right: ${theme.spacings.xxsmall};
+    }
     color: ${theme.colors.white};
-    transition: transform 0.1 ease-in-out;
+    /* transition: transform 0.1 ease-in-out; */
     z-index: ${theme.layers.alwaysOnTop};
     background-color: ${theme.colors.primary};
     padding-left: ${theme.spacings.medium};
@@ -58,7 +62,7 @@ export const Wrapper = styled.menu<MenuProps>`
     z-index: ${theme.layers.alwaysOnTop};
     background: ${theme.colors.white};
     box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     ${inScroll && wrapperModifiers.inScroll(theme)};
     ${media.lessThan('medium')`
     position: fixed;
@@ -69,6 +73,11 @@ export const Wrapper = styled.menu<MenuProps>`
       ${MenuNav} {
         display: none;
       }
+      button {
+        display: none;
+      }
+    `}
+    ${media.lessThan('large')`
       button {
         display: none;
       }
@@ -204,9 +213,12 @@ export const MenuLinkHome = styled(MenuLink)`
 `
 
 export const MenuNav = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: none;
+  ${media.greaterThan('large')`
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  `}
 `
 
 export const MenuWrapper = styled.div`

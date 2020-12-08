@@ -17,11 +17,17 @@ export const FirstColumn = styled.div`
     align-items: center;
     height: 500px;
     width: 100px;
-    div {
+    ${Paragraphs} {
       width: 500px;
+      height: 200px;
     }
+
     ${media.lessThan('medium')`
-      div {
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      ${Paragraphs} {
         width: 300px;
       }
     `}
@@ -40,16 +46,17 @@ export const SecondColumn = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: space-between;
-
-    div {
+    justify-content: space-around;
+    height: 500px;
+    width: 100px;
+    ${Paragraphs} {
       width: 500px;
+      height: 120px;
     }
-    ${media.lessThan('medium')`
-      div {
-        width: 300px;
-      }
-    `}
+    .imageContainer div {
+      display: flex;
+      justify-content: center;
+    }
     p {
       text-align: left;
       font-size: ${theme.font.sizes.small};
@@ -57,7 +64,22 @@ export const SecondColumn = styled.div`
       margin-top: ${theme.spacings.small};
     }
     img {
-      max-width: 60%;
+      width: 50%;
     }
+    ${media.lessThan('small')`
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      ${Paragraphs} {
+        width: 300px;
+        height: 100%;
+      }
+      img {
+        display: none;
+      }
+    `}
   `}
 `
+
+export const Paragraphs = styled.div``
