@@ -185,12 +185,16 @@ export const MenuLink = styled.div`
     height: 40px;
     font-size: ${theme.font.sizes.medium};
     margin: 0.3rem ${theme.spacings.small} 0;
-    text-decoration: none;
+    a {
+      text-decoration: none;
+      color: ${theme.colors.black};
+    }
     text-align: center;
     display: flex;
     align-items: center;
     z-index: ${theme.layers.alwaysOnTop};
     cursor: pointer;
+
     &:hover ${MenuItens} {
       opacity: 1;
       display: block;
@@ -200,7 +204,7 @@ export const MenuLink = styled.div`
       transform-origin: 175px 0px;
       background-color: ${theme.colors.heading};
     }
-    &:hover {
+    &:hover a{
       color: ${theme.colors.secondary};
     }
   `}
@@ -252,17 +256,19 @@ export const MenuItensLaywers = styled(MenuItens)`
   min-width: 120px;
 `
 
-export const SubItens = styled.a`
+export const SubItens = styled.div`
   ${({ theme }) => css`
-    color: ${theme.colors.black};
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    background-color: ${theme.colors.lightBlue};
-    font-size: ${theme.font.sizes.xsmall};
-    &:hover {
-      background-color: ${darken(0.1, theme.colors.lightBlue)};
+    a {
+      color: ${theme.colors.black};
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      background-color: ${theme.colors.lightBlue};
+      font-size: ${theme.font.sizes.xsmall};
+      &:hover {
+        background-color: ${darken(0.1, theme.colors.lightBlue)};
+      }
     }
   `}
 `
