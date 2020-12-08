@@ -15,7 +15,7 @@ const Footer = () => (
         <a href="mailto:atendimento@mmvadvogados.com.br">
           atendimento@mmvadvogados.com.br
         </a>
-        <a>+55 11 2359-9600</a>
+        <a href="tel:+55-11-2359-9600">+55 11 2359-9600</a>
       </S.Column>
 
       <S.Column>

@@ -37,14 +37,17 @@ export const TopBar = styled.div`
     width: 100%;
     justify-content: flex-end;
     align-items: center;
+    color: ${theme.colors.white};
+    a {
+      text-decoration: none;
+      color: ${theme.colors.white} !important;
+    }
     p {
       ${media.greaterThan('medium')`
         display: none;
       `}
       margin-right: ${theme.spacings.xxsmall};
     }
-    color: ${theme.colors.white};
-    /* transition: transform 0.1 ease-in-out; */
     z-index: ${theme.layers.alwaysOnTop};
     background-color: ${theme.colors.primary};
     padding-left: ${theme.spacings.medium};
