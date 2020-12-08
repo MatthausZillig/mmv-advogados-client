@@ -84,7 +84,7 @@ const Footer = () => (
     <S.Copyright>
       Monaco, Miranda & Vedana 2020 © All rights reserved.
       <S.Baw>
-        Made by
+        Developed by
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="60"

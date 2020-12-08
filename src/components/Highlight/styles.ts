@@ -28,13 +28,19 @@ const wrapperModifiers = {
 export const Wrapper = styled.section<WrapperProps>`
   ${({ backgroundImage, alignment }) => css`
     position: relative;
-    background-image: url(${backgroundImage});
+    /* background-image: url(${backgroundImage});
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
     height: 23rem;
     display: grid;
     grid-template-areas: 'floatimage content';
     grid-template-columns: 1.3fr 2fr;
+    .backgroundImage {
+      width: 100%;
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+    }
     cursor: grab;
     &:hover ::after {
       background-color: rgba(0, 0, 0, 0.8);
@@ -58,17 +64,20 @@ export const Wrapper = styled.section<WrapperProps>`
   `}
 `
 
-export const FloatImage = styled.img`
+export const FloatImage = styled.div`
   ${({ theme }) => css`
     grid-area: floatimage;
     z-index: ${theme.layers.base};
-    max-height: 23rem;
-    max-width: 200px;
     align-self: end;
-    ${media.greaterThan('medium')`
+    margin-bottom: -60px;
+    .floatImage {
+      max-height: 23rem;
+      max-width: 200px;
+      ${media.greaterThan('medium')`
       max-height: 32rem;
       max-width: 100%;
     `}
+    }
   `}
 `
 

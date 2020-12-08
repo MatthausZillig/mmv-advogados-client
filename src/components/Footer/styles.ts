@@ -65,8 +65,10 @@ export const Baw = styled.div`
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    width: 130px;
+    width: 150px;
     transition: fill 0.1s ease;
+    color: ${theme.colors.gray};
+    font-size: ${theme.font.sizes.xsmall};
     &:hover g polygon {
       fill: #ff6495;
     }

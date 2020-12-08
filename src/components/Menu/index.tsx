@@ -1,5 +1,8 @@
 import { useState } from 'react'
+import Link from 'next/link'
+
 import * as S from './styles'
+
 import Logo from 'components/Logo'
 import Button from 'components/Button'
 import MediaMatch from 'components/MediaMatch'
@@ -40,25 +43,25 @@ const Menu = () => {
             </label>
             <S.Ul>
               <li>
-                <a href="/home">Home</a>
+                <Link href="/home">Home</Link>
               </li>
               <li>
-                <a href="/escritorio">Escritório</a>
+                <Link href="/escritorio">Escritório</Link>
               </li>
               <li>
-                <a href="/areas">Áreas de atuação</a>
+                <Link href="/areas">Áreas de atuação</Link>
               </li>
               <li>
-                <a href="/">Sócios</a>
+                <Link href="/">Sócios</Link>
               </li>
               <li>
-                <a href="/trabalhe-conosco">Trabalhe conosco</a>
+                <Link href="/trabalhe-conosco">Trabalhe conosco</Link>
               </li>
               <li>
-                <a href="/blog">Blog</a>
+                <Link href="/blog">Blog</Link>
               </li>
               <li>
-                <a href="/contato">Contato</a>
+                <Link href="/contato">Contato</Link>
               </li>
             </S.Ul>
           </MediaMatch>
@@ -67,28 +70,48 @@ const Menu = () => {
             <S.MenuLink>
               Escritório
               <S.MenuItens>
-                <S.SubItens>Quem somos</S.SubItens>
-                <S.SubItens>Onde estamos</S.SubItens>
+                <S.SubItens>
+                  <Link href="/sobre/quem-somos">Quem Somos</Link>
+                </S.SubItens>
+                <S.SubItens>
+                  <Link href="/sobre/onde-estamos">Onde Estamos</Link>
+                </S.SubItens>
               </S.MenuItens>
             </S.MenuLink>
             <S.MenuLink>
               Áreas de atuação
               <S.MenuItensAreas>
-                <S.SubItens>Direito Civil</S.SubItens>
-                <S.SubItens>Direito do Trabalho</S.SubItens>
-                <S.SubItens>Direito Imobiliário</S.SubItens>
-                <S.SubItens>Direito Empresarial</S.SubItens>
-                <S.SubItens>Direito do Consumidor</S.SubItens>
-                <S.SubItens>Direito de Familía</S.SubItens>
+                <S.SubItens>
+                  <Link href="/areas/civil">Direito Civil</Link>
+                </S.SubItens>
+                <S.SubItens>
+                  <Link href="/areas/trabalho">Direito do Trabalho</Link>
+                </S.SubItens>
+                <S.SubItens>
+                  <Link href="/areas/imobiliario">Direito Imobiliário</Link>
+                </S.SubItens>
+                <S.SubItens>
+                  <Link href="/areas/empresarial">Direito Empresarial</Link>
+                </S.SubItens>
+                <S.SubItens>
+                  <Link href="/areas/consumidor">Direito do Consumidor</Link>
+                </S.SubItens>
+                <S.SubItens>
+                  <Link href="/areas/familia">Direito de Família</Link>
+                </S.SubItens>
               </S.MenuItensAreas>
             </S.MenuLink>
             <S.MenuLink>
-              Advogados
+              Sócios
               <S.MenuItensLaywers>
-                <S.SubItens>Sócios</S.SubItens>
+                <S.SubItens>
+                  <Link href="/socios">Sócios</Link>
+                </S.SubItens>
               </S.MenuItensLaywers>
             </S.MenuLink>
-            <S.MenuLink>Blog</S.MenuLink>
+            <S.MenuLink>
+              <Link href="/blog">Blog</Link>
+            </S.MenuLink>
           </S.MenuNav>
           <Button>Contato</Button>
         </S.MenuWrapper>
