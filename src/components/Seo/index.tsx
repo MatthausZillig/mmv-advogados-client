@@ -26,6 +26,7 @@ const Seo = ({
       <link rel="apple-touch-icon" href="/img/favicon.png" />
       <link rel="manifest" href="/manifest.json" />
       {pageImage && <meta name="image" content={pageImage} />}
+      {description && <meta name="description" content={description} />}
       <meta httpEquiv="x-ua-compatible" content="IE=edge,chrome=1" />
       <meta name="MobileOptimized" content="320" />
       <meta name="HandheldFriendly" content="True" />
