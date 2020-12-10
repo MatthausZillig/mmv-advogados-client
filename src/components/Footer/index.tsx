@@ -87,7 +87,7 @@ const Footer = () => (
         Developed by
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="60"
+          width="50"
           viewBox="0 0 765.5 847.42"
         >
           <g>
