@@ -70,7 +70,7 @@ export const Baw = styled.div`
     color: ${theme.colors.gray};
     font-size: ${theme.font.sizes.xsmall};
     &:hover g polygon {
-      fill: #ff6495;
+      fill: ${theme.colors.black};
     }
     ${media.lessThan('medium')`
       margin-top: ${theme.spacings.small};
