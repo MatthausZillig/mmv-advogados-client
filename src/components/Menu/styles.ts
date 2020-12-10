@@ -29,6 +29,7 @@ const wrapperModifiers = {
 export const TopBar = styled.div`
   ${({ theme }) => css`
     display: flex;
+    justify-content: center;
     position: fixed;
     opacity: 1;
     top: 0;
@@ -39,6 +40,12 @@ export const TopBar = styled.div`
     color: ${theme.colors.white};
     transform: translate(0%, 0%);
     transition: all 0.3s ease;
+    div {
+      width: ${theme.grid.container};
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 auto;
+    }
     a {
       text-decoration: none;
       color: ${theme.colors.white} !important;
@@ -212,7 +219,10 @@ export const MenuLink = styled.div`
       background-color: ${theme.colors.heading};
     }
     &:hover a{
-      color: ${theme.colors.secondary};
+      color: ${theme.colors.primary};
+    }
+    &:hover ${SubItens} a{
+      color: ${theme.colors.black};
     }
   `}
 `
@@ -260,7 +270,7 @@ export const MenuItensAreas = styled(MenuItens)`
 `
 
 export const MenuItensLaywers = styled(MenuItens)`
-  min-width: 120px;
+  min-width: 150px;
 `
 
 export const SubItens = styled.div`

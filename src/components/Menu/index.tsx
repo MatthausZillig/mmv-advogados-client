@@ -28,8 +28,10 @@ const Menu = () => {
   return (
     <>
       <S.TopBar>
-        <p>Contato:</p>
-        <a href="tel:+55-11-2359-9600">+55 11 2359-9600</a>
+        <div>
+          <p>Contato:</p>
+          <a href="tel:+55-11-2359-9600">+55 11 2359-9600</a>
+        </div>
       </S.TopBar>
       <S.Wrapper data-testid="menu" inScroll={navbar}>
         <S.MenuWrapper>
@@ -68,7 +70,7 @@ const Menu = () => {
           <S.MenuNav>
             <S.MenuLinkHome>Home</S.MenuLinkHome>
             <S.MenuLink>
-              Escritório
+              <Link href="/sobre">Escritório</Link>
               <S.MenuItens>
                 <S.SubItens>
                   <Link href="/sobre/quem-somos">Quem Somos</Link>
@@ -79,7 +81,7 @@ const Menu = () => {
               </S.MenuItens>
             </S.MenuLink>
             <S.MenuLink>
-              Áreas de atuação
+              <Link href="/areas">Áreas de atuação</Link>
               <S.MenuItensAreas>
                 <S.SubItens>
                   <Link href="/areas/civil">Direito Civil</Link>
@@ -102,10 +104,13 @@ const Menu = () => {
               </S.MenuItensAreas>
             </S.MenuLink>
             <S.MenuLink>
-              Sócios
+              <Link href="/socios">Sócios</Link>
               <S.MenuItensLaywers>
                 <S.SubItens>
-                  <Link href="/socios">Sócios</Link>
+                  <Link href="/socios/trabalhista">Direito Trabalhista</Link>
+                </S.SubItens>
+                <S.SubItens>
+                  <Link href="/socios/imobiliario">Direito Imobiliário</Link>
                 </S.SubItens>
               </S.MenuItensLaywers>
             </S.MenuLink>
