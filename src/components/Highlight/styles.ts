@@ -16,6 +16,12 @@ const wrapperModifiers = {
   left: () => css`
     grid-template-areas: 'content floatimage';
     grid-template-columns: 2fr 1.3fr;
+    ${media.lessThan('medium')`
+      grid-template-columns: 1.3fr 2fr;
+      button {
+        font-size: 10px;
+      }
+    `}
     ${Content} {
       text-align: left;
     }
@@ -57,7 +63,6 @@ export const Wrapper = styled.section<WrapperProps>`
     ${media.greaterThan('medium')`
       height: 35rem;
     `}
-
     ${wrapperModifiers[alignment!]()}
   `}
 `
@@ -67,15 +72,19 @@ export const FloatImage = styled.div`
     grid-area: floatimage;
     z-index: ${theme.layers.base};
     align-self: end;
-    margin-bottom: -4px;
+    margin-bottom: -45px;
+    ${media.lessThan('small')`
+      max-width: 200%;
+      height: 23rem;
+    `}
     ${media.greaterThan('medium')`
         margin-bottom: -60px;
     `}
     .floatImage {
-      height: 23rem;
+      height: 19rem;
+      max-width: 100%;
       ${media.greaterThan('small')`
         height: 32rem;
-        max-width: 100%;
       `}
     }
   `}

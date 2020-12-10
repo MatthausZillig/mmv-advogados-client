@@ -32,7 +32,6 @@ const settings: SliderSettings = {
   dots: true,
   arrows: false,
   infinite: true,
-  autoplay: true,
   responsive: [
     {
       breakpoint: 1170,
