@@ -1,18 +1,18 @@
 ﻿export default [
   {
     img: '/img/reuniao_ideia.jpeg',
-    title: 'NIKE Online Store launches the website',
+    title: 'Lorem Ipsum',
     subtitle: 'Carolina Zillig - 04 Aug',
     description:
-      'Be Your Best Every Time With Nike Shoes And Clothing. Shop Online. The Official Website. Home Of Everything Nike. Shop The Latest Releases Today! Types: Shoes, Tops.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim nisi eget aliquam consequat. Praesent interdum pharetra ipsum sit amet lacinia.',
     chips: ['direito', 'trabalho']
   },
   {
     img: '/img/advogado.jpeg',
-    title: 'NIKE Online Store launches the website',
+    title: 'Lorem Ipsum',
     subtitle: 'Ligia - 03 Aug',
     description:
-      'Be Your Best Every Time With Nike Shoes And Clothing. Shop Online. The Official Website. Home Of Everything Nike. Shop The Latest Releases Today! Types: Shoes, Tops.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim nisi eget aliquam consequat. Praesent interdum pharetra ipsum sit amet lacinia.',
     chips: ['direito', 'trabalho', 'empresarial']
   }
 ]
