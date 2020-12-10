@@ -9,7 +9,7 @@ type WrapperProps = { hasIcon: boolean } & Pick<
 const WrapperModifiers = {
   small: (theme: DefaultTheme) => css`
     height: 3rem;
-    font-size: ${theme.font.sizes.xsmall};
+    font-size: ${theme.font.sizes.xxsmall};
   `,
   medium: (theme: DefaultTheme) => css`
     height: 4rem;
