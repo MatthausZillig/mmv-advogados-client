@@ -15,8 +15,7 @@ const wrapperModifiers = {
       width: 280px;
     }
     ${TopBar} {
-      transform: translate(-10%, -10%);
-      display: none;
+      transform: translate(-50%, -50%);
     }
   `,
   inScrollMenuLink: (theme: DefaultTheme) => css`
@@ -30,7 +29,7 @@ const wrapperModifiers = {
 export const TopBar = styled.div`
   ${({ theme }) => css`
     display: flex;
-    position: absolute;
+    position: fixed;
     opacity: 1;
     top: 0;
     height: 40px;
@@ -38,6 +37,8 @@ export const TopBar = styled.div`
     justify-content: flex-end;
     align-items: center;
     color: ${theme.colors.white};
+    transform: translate(0%, 0%);
+    transition: all 0.3s ease;
     a {
       text-decoration: none;
       color: ${theme.colors.white} !important;

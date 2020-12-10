@@ -72,12 +72,11 @@ export const FloatImage = styled.div`
         margin-bottom: -60px;
     `}
     .floatImage {
-      max-height: 23rem;
-      max-width: 200px;
-      ${media.greaterThan('medium')`
-      max-height: 32rem;
-      max-width: 100%;
-    `}
+      height: 23rem;
+      ${media.greaterThan('small')`
+        height: 32rem;
+        max-width: 100%;
+      `}
     }
   `}
 `
