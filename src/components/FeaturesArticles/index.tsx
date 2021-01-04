@@ -31,7 +31,13 @@ const FeaturesArticles = ({ items }: FeatureProps) => (
       {items.map((item, index) => (
         <S.FeatureBox key={index}>
           <div style={{ maxHeight: '300px' }}>
-            <Image src={item.img} role="img" aria-label={item.title} unsized />
+            <Image
+              src={item.img}
+              role="img"
+              aria-label={item.title}
+              width="538px"
+              height="300px"
+            />
           </div>
           <S.Card>
             <div style={{ display: 'flex' }}>

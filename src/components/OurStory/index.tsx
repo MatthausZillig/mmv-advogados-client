@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import * as S from './styles'
 import Heading from 'components/Heading'
 
@@ -36,11 +35,10 @@ const OurStory = () => (
         className="imageContainer"
         style={{ display: 'flex', justifyContent: 'center' }}
       >
-        <Image
+        <img
           src="/img/ourStory1.png"
           role="img"
           aria-label="Ilustração dois emrpesarios apertando as mãos"
-          unsized
         />
       </div>
     </S.SecondColumn>

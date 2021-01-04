@@ -67,6 +67,12 @@ export const SectionOurStory = styled(SectionNews)`
   `}
 `
 
+export const SectionTeam = styled(Sections)`
+  ${({ theme }) => css`
+    background: ${theme.colors.white};
+  `}
+`
+
 export const SectionMostPopular = styled(Sections)``
 
 export const SectionHeadings = styled(Sections)`

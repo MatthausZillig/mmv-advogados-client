@@ -45,7 +45,7 @@ const Menu = () => {
             </label>
             <S.Ul>
               <li>
-                <Link href="/home">Home</Link>
+                <Link href="/">Home</Link>
               </li>
               <li>
                 <Link href="/escritorio">Escritório</Link>
@@ -68,7 +68,9 @@ const Menu = () => {
             </S.Ul>
           </MediaMatch>
           <S.MenuNav>
-            <S.MenuLinkHome>Home</S.MenuLinkHome>
+            <S.MenuLinkHome>
+              <Link href="/">Home</Link>
+            </S.MenuLinkHome>
             <S.MenuLink>
               <Link href="/sobre">Escritório</Link>
               <S.MenuItens>
@@ -104,15 +106,7 @@ const Menu = () => {
               </S.MenuItensAreas>
             </S.MenuLink>
             <S.MenuLink>
-              <Link href="/socios">Sócios</Link>
-              <S.MenuItensLaywers>
-                <S.SubItens>
-                  <Link href="/socios/trabalhista">Direito Trabalhista</Link>
-                </S.SubItens>
-                <S.SubItens>
-                  <Link href="/socios/imobiliario">Direito Imobiliário</Link>
-                </S.SubItens>
-              </S.MenuItensLaywers>
+              <Link href="/Equipe">Equipe</Link>
             </S.MenuLink>
             <S.MenuLink>
               <Link href="/blog">Blog</Link>

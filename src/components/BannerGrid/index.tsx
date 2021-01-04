@@ -15,7 +15,7 @@ function BannerGrid({ items }: BannerGridProps) {
           src={items[0].img}
           role="img"
           aria-label={items[0].title}
-          unsized
+          layout="fill"
         />
         <S.Caption>
           <S.Title>{items[0].title}</S.Title>
@@ -31,7 +31,7 @@ function BannerGrid({ items }: BannerGridProps) {
           src={items[1].img}
           role="img"
           aria-label={items[1].title}
-          unsized
+          layout="fill"
         />
         <S.Caption>
           <S.Title>{items[1].title}</S.Title>
@@ -47,7 +47,7 @@ function BannerGrid({ items }: BannerGridProps) {
           src={items[2].img}
           role="img"
           aria-label={items[2].title}
-          unsized
+          layout="fill"
         />
         <S.Caption>
           <S.Title>{items[2].title}</S.Title>
@@ -63,7 +63,7 @@ function BannerGrid({ items }: BannerGridProps) {
           src={items[3].img}
           role="img"
           aria-label={items[3].title}
-          unsized
+          layout="fill"
         />
         <S.Caption>
           <S.Title>{items[3].title}</S.Title>
@@ -79,7 +79,7 @@ function BannerGrid({ items }: BannerGridProps) {
           src={items[4].img}
           role="img"
           aria-label={items[4].title}
-          unsized
+          layout="fill"
         />
         <S.Caption>
           <S.Title>{items[4].title}</S.Title>

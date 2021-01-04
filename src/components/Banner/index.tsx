@@ -35,7 +35,13 @@ const Banner = ({
         </Ribbon>
       )}
 
-      <Image src={img} role="img" aria-label={title} unsized />
+      <Image
+        src={img}
+        role="img"
+        aria-label={title}
+        width="1300px"
+        height="230px"
+      />
 
       <S.Caption>
         <S.Title>{title}</S.Title>

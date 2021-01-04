@@ -27,17 +27,11 @@ const Highlight = ({
       src={backgroundImage}
       role="img"
       aria-label={title}
-      unsized
+      layout="fill"
     />
     {!!floatImage && (
       <S.FloatImage>
-        <Image
-          className="floatImage"
-          src={floatImage}
-          alt={title}
-          role="img"
-          unsized
-        />
+        <img className="floatImage" src={floatImage} alt={title} role="img" />
       </S.FloatImage>
     )}
     <S.Content>
