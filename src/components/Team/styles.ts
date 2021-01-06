@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   display: flex;
@@ -32,6 +33,26 @@ export const Card = styled.div`
     padding: 2.4rem;
     transition: all ease-in-out;
     margin: ${theme.spacings.xxsmall};
+    .cardContainer {
+      display: 'flex';
+      justify-content: 'space-between';
+      ${media.greaterThan('medium')`
+          flex-direction: 'column';
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          div {
+            margin: 0 auto;
+            text-align: center;
+          }
+      `}
+    }
+    ${media.lessThan('medium')`
+        width: 100%
+        flex-grow: 0;
+        max-width: 100%;
+        flex-basis: 100%;
+      `}
     &:hover {
       transform: translate3d(0, -5px, 0);
       box-shadow: 0 1.5rem 2.5rem rgba(22, 28, 45, 0.1),

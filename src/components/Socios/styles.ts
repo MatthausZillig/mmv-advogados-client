@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   display: flex;
@@ -20,6 +21,9 @@ export const Socio = styled.div`
       border-radius: ${theme.border.radius};
       padding: ${theme.spacings.medium};
       text-align: left;
+      ${media.lessThan('medium')`
+        width: 100%
+      `}
       &:hover {
         transform: translate3d(0,-5px,0);
         box-shadow: 0 1.5rem 2.5rem rgba(22,28,45,.1),0 .3rem 0.5rem -.50rem rgba(22,28,45,.05) !important;

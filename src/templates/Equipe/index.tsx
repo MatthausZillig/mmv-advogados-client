@@ -1,4 +1,5 @@
 import { SocioProps } from 'components/Socios'
+import { PeapleProps } from 'components/Team'
 
 import { Container } from 'components/Container'
 
@@ -13,9 +14,10 @@ import * as S from './styles'
 
 export type EquipeTemplateProps = {
   socios: SocioProps[]
+  team: PeapleProps[]
 }
 
-const Home = ({ socios }: EquipeTemplateProps) => (
+const Home = ({ socios, team }: EquipeTemplateProps) => (
   <section>
     <Menu />
     <S.SectionTeam>
@@ -32,7 +34,7 @@ const Home = ({ socios }: EquipeTemplateProps) => (
           </Heading>
         </S.SectionHeadingsTwo>
 
-        <Team />
+        <Team items={team} />
       </Container>
     </S.SectionTeam>
     <S.SectionFooter>

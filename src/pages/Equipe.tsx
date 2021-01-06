@@ -1,5 +1,6 @@
 import Equipe, { EquipeTemplateProps } from 'templates/Equipe'
 import sociosMock from 'components/Socios/mock'
+import teamMock from 'components/Team/mock'
 
 export default function index(props: EquipeTemplateProps) {
   return <Equipe {...props} />
@@ -8,7 +9,8 @@ export default function index(props: EquipeTemplateProps) {
 export function getStaticProps() {
   return {
     props: {
-      socios: sociosMock
+      socios: sociosMock,
+      team: teamMock
     }
   }
 }
