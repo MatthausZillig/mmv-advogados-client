@@ -23,6 +23,12 @@ export const SectionHeadings = styled(Sections)`
   `}
 `
 
+export const SectionHeadingsTwo = styled(Sections)`
+  ${({ theme }) => css`
+    margin-bottom: calc(${theme.spacings.small} * 2);
+  `}
+`
+
 export const SectionFooter = styled.section`
   ${({ theme }) => css`
     padding-bottom: ${theme.spacings.xxlarge};

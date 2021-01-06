@@ -4,28 +4,7 @@ export const Wrapper = styled.main`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 10rem;
   flex-wrap: wrap;
-`
-
-export const Socio = styled.div`
-  ${({ theme }) => css`
-      width: 38rem;
-      height: 60rem;
-      background: rgb(247, 249, 250);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      border-radius: ${theme.border.radius};
-      padding: ${theme.spacings.medium};
-      text-align: left;
-      &:hover {
-        transform: translate3d(0,-5px,0);
-        box-shadow: 0 1.5rem 2.5rem rgba(22,28,45,.1),0 .3rem 0.5rem -.50rem rgba(22,28,45,.05) !important;
-      }
-    }
-  `}
 `
 
 export const Avatar = styled.div`
@@ -39,6 +18,25 @@ export const Avatar = styled.div`
     object-fit: cover;
     background-color: ${theme.colors.white};
     margin-bottom: ${theme.spacings.small};
+  `}
+`
+
+export const Card = styled.div`
+  ${({ theme }) => css`
+    background: rgb(247, 249, 250);
+    box-shadow: none;
+    border-radius: ${theme.border};
+    flex-grow: 0;
+    max-width: 32%;
+    flex-basis: 32%;
+    padding: 2.4rem;
+    transition: all ease-in-out;
+    margin: ${theme.spacings.xxsmall};
+    &:hover {
+      transform: translate3d(0, -5px, 0);
+      box-shadow: 0 1.5rem 2.5rem rgba(22, 28, 45, 0.1),
+        0 0.3rem 0.5rem -0.5rem rgba(22, 28, 45, 0.05) !important;
+    }
   `}
 `
 

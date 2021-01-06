@@ -7,6 +7,7 @@ import Heading from 'components/Heading'
 import Socios from 'components/Socios'
 import Menu from 'components/Menu'
 import CookiePolicy from 'components/CookiePolicy'
+import Team from 'components/Team'
 
 import * as S from './styles'
 
@@ -17,7 +18,6 @@ export type EquipeTemplateProps = {
 const Home = ({ socios }: EquipeTemplateProps) => (
   <section>
     <Menu />
-
     <S.SectionTeam>
       <Container>
         <S.SectionHeadings>
@@ -26,9 +26,15 @@ const Home = ({ socios }: EquipeTemplateProps) => (
           </Heading>
         </S.SectionHeadings>
         <Socios items={socios} />
+        <S.SectionHeadingsTwo>
+          <Heading lineLeft lineColor="heading" color="black">
+            Conheça nosso time
+          </Heading>
+        </S.SectionHeadingsTwo>
+
+        <Team />
       </Container>
     </S.SectionTeam>
-
     <S.SectionFooter>
       <Container>
         <Footer />
