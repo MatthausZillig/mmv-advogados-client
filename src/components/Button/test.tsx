@@ -5,13 +5,6 @@ import { AddShoppingCart } from '@styled-icons/material-outlined/AddShoppingCart
 import Button from '.'
 
 describe('<Button />', () => {
-  it('should render the small size', () => {
-    renderWithTheme(<Button size="small">Buy now</Button>)
-    expect(screen.getByRole('button', { name: /Buy now/i })).toHaveStyle({
-      height: '3rem',
-      'font-size': '1.2rem'
-    })
-  })
   it('should render the large size', () => {
     renderWithTheme(<Button size="large">Buy now</Button>)
     expect(screen.getByRole('button', { name: /Buy now/i })).toHaveStyle({
