@@ -1,5 +1,12 @@
 ﻿export default [
   {
+    img: '/img/predios.jpg',
+    title: 'Direito Condominial',
+    subtitle: 'Assessoria Jurídica',
+    imgLabel: 'Saiba mais',
+    imgLink: '/areas/imobiliario'
+  },
+  {
     img: '/img/empresarial.jpeg',
     title: 'Direito Empresarial',
     subtitle: 'Assessoria Jurídica',
@@ -7,18 +14,11 @@
     imgLink: '/areas/empresarial'
   },
   {
-    img: '/img/empresarial_02.jpeg',
+    img: '/img/industrial.jpg',
     title: 'Direito do Trabalho',
     subtitle: 'Assessoria Jurídica',
     imgLabel: 'Saiba mais',
     imgLink: '/areas/trabalho'
-  },
-  {
-    img: '/img/predios.jpg',
-    title: 'Direito Imobiliário',
-    subtitle: 'Assessoria Jurídica',
-    imgLabel: 'Saiba mais',
-    imgLink: '/areas/imobiliario'
   },
   {
     img: '/img/mercado.jpg',
