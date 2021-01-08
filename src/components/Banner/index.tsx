@@ -9,11 +9,12 @@ export type BannerProps = {
   img: string
   title: string
   subtitle: string
-  buttonLabel: string
-  buttonLink: string
+  buttonLabel?: string
+  buttonLink?: string
   ribbon?: React.ReactNode
   ribbonColor?: RibbonColors
   ribbonSize?: RibbonSizes
+  type?: boolean
   theClass: string
 }
 
@@ -24,6 +25,7 @@ const Banner = ({
   buttonLabel,
   buttonLink,
   ribbon,
+  type,
   ribbonColor = 'heading',
   ribbonSize = 'normal'
 }: BannerProps) => {
@@ -39,16 +41,18 @@ const Banner = ({
         src={img}
         role="img"
         aria-label={title}
-        width="1300px"
+        width={type ? '1920px' : '1300px'}
         height="230px"
       />
 
       <S.Caption>
         <S.Title>{title}</S.Title>
         <S.Subtitle dangerouslySetInnerHTML={{ __html: subtitle }} />
-        <Button as="a" href={buttonLink} size="large">
-          {buttonLabel}
-        </Button>
+        {buttonLink && buttonLabel && (
+          <Button as="a" href={buttonLink} size="large">
+            {buttonLabel}
+          </Button>
+        )}
       </S.Caption>
     </S.Wrapper>
   )

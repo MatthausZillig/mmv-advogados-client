@@ -72,15 +72,7 @@ const Menu = () => {
               <Link href="/">Home</Link>
             </S.MenuLinkHome>
             <S.MenuLink>
-              <Link href="/sobre">Escritório</Link>
-              <S.MenuItens>
-                <S.SubItens>
-                  <Link href="/sobre/quem-somos">Quem Somos</Link>
-                </S.SubItens>
-                <S.SubItens>
-                  <Link href="/sobre/onde-estamos">Onde Estamos</Link>
-                </S.SubItens>
-              </S.MenuItens>
+              <Link href="/Escritorio">Escritório</Link>
             </S.MenuLink>
             <S.MenuLink>
               <Link href="/areas">Áreas de atuação</Link>
