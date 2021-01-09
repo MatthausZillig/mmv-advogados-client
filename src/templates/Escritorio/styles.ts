@@ -12,9 +12,11 @@ const Sections = styled.section`
 
 export const SectionBanner = styled(Sections)`
   ${({ theme }) => css`
-    margin-bottom: calc(${theme.spacings.xxlarge} * 2);
+    margin-bottom: 2rem;
+    margin-top: 15rem;
     ${media.greaterThan('large')`
-      margin-top: -13rem;
+    margin-bottom: calc(${theme.spacings.xxlarge} * 2);
+    margin-top: -20rem;
     `}
 
     ${media.greaterThan('medium')`
@@ -33,10 +35,16 @@ export const SectionHeadings = styled(Sections)``
 export const SectionQuemSomos = styled(Sections)`
   background-color: white;
   padding: 8rem;
+  ${media.lessThan('medium')`
+       padding: 2rem 1rem;
+  `}
 `
 
 export const SectionMaps = styled(Sections)`
   padding: 8rem;
+  ${media.lessThan('medium')`
+       padding: 2rem 1rem;
+  `}
 `
 
 export const SectionFooter = styled.section`
