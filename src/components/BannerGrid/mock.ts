@@ -38,5 +38,12 @@
     img: 'https://source.unsplash.com/user/willianjusten/1042x581',
     imgLabel: 'Veja todos',
     imgLink: '/areas'
+  },
+  {
+    img: '/img/civil.jpg',
+    title: 'Direito de Familía',
+    subtitle: 'Assessoria Jurídica',
+    imgLabel: 'Saiba mais',
+    imgLink: '/areas/area/familia'
   }
 ]

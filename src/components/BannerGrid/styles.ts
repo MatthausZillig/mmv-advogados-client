@@ -1,13 +1,37 @@
 import styled, { css } from 'styled-components'
+import { BannerGridProps } from '.'
 import media from 'styled-media-query'
 
 import * as RibbonStyles from 'components/Ribbon/styles'
 
-export const Wrapper = styled.section`
-  ${({ theme }) => css`
+type BannerType = Pick<BannerGridProps, 'classe'>
+
+const WrapperModifiers = {
+  two: () => css`
+    grid-template-areas:
+      'one one two two'
+      'tree tree four four'
+      'five five six six';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  `,
+  hover: () => css`
+    a {
+      opacity: 0;
+    }
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+      a {
+        opacity: 1;
+      }
+    }
+  `
+}
+export const Wrapper = styled.section<BannerType>`
+  ${({ theme, classe }) => css`
     display: grid;
     height: 70rem;
     cursor: pointer;
+
     grid-template-areas:
       'one two two'
       'one two two'
@@ -23,6 +47,7 @@ export const Wrapper = styled.section`
       overflow-x: scroll;
       height: 32rem;
     `}
+    ${!!classe && WrapperModifiers.two()};
   `}
 `
 export const WrapperImage = styled.main`
@@ -151,13 +176,16 @@ export const Image5 = styled(Image)`
   }
 `
 
-export const Image6 = styled(Image)`
-  grid-area: six;
-  background-color: rgba(0, 0, 0, 0.6);
+export const Image6 = styled(Image)<BannerType>`
+  ${({ classe }) => css`
+    grid-area: six;
+    background-color: rgba(0, 0, 0, 0.6);
 
-  a {
-    opacity: 1;
-  }
+    a {
+      opacity: 1;
+    }
+    ${!!classe && WrapperModifiers.hover()};
+  `}
 `
 
 export const Title = styled.h2`

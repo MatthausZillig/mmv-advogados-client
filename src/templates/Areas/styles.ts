@@ -25,48 +25,6 @@ export const SectionBanner = styled.section`
   `}
 `
 
-export const SectionNews = styled(Sections)`
-  ${({ theme }) => css`
-    margin-bottom: calc(${theme.spacings.xxlarge} * 2);
-    ${media.greaterThan('large')`
-      margin-top: -13rem;
-    `}
-    ${media.greaterThan('medium')`
-      margin-bottom: 0;
-      padding-top: 17rem;
-      padding-bottom: 17rem;
-      background-color: ${theme.colors.white};
-      clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
-      ${HeadingStyles.Wrapper} {
-        color: ${theme.colors.black};
-      }
-    `}
-  `}
-`
-
-export const SectionOurStory = styled(SectionNews)`
-  ${({ theme }) => css`
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-    background-color: #fff;
-    ${media.lessThan('medium')`
-    padding-top: 8rem;
-    padding-bottom: 10rem;
-    ${HeadingStyles.Wrapper} {
-          color: ${theme.colors.black};
-        }
-    `}
-  `}
-`
-
-export const SectionTeam = styled(Sections)`
-  ${({ theme }) => css`
-    background: ${theme.colors.white};
-  `}
-`
-
-export const SectionMostPopular = styled(Sections)``
-
 export const SectionHeadings = styled(Sections)`
   ${({ theme }) => css`
     margin-bottom: calc(${theme.spacings.small} * 2);

@@ -5,11 +5,12 @@ import { ImagesProps } from './ImagesTypes'
 
 export type BannerGridProps = {
   items: ImagesProps[]
+  classe?: boolean
 }
 
-function BannerGrid({ items }: BannerGridProps) {
+function BannerGrid({ items, classe = false }: BannerGridProps) {
   return (
-    <S.Wrapper>
+    <S.Wrapper classe={classe}>
       <S.Image>
         <Image
           src={items[0].img}
@@ -89,16 +90,37 @@ function BannerGrid({ items }: BannerGridProps) {
           </Button>
         </S.Caption>
       </S.Image5>
-
-      <S.Image6>
-        <S.Caption>
-          <S.Title>{items[5].title}</S.Title>
-          <S.Subtitle dangerouslySetInnerHTML={{ __html: items[5].subtitle }} />
-          <Button as="a" href={items[5].imgLink} size="large">
-            {items[5].imgLabel}
-          </Button>
-        </S.Caption>
-      </S.Image6>
+      {!classe ? (
+        <S.Image6>
+          <S.Caption>
+            <S.Title>{items[5].title}</S.Title>
+            <S.Subtitle
+              dangerouslySetInnerHTML={{ __html: items[5].subtitle }}
+            />
+            <Button as="a" href={items[5].imgLink} size="large">
+              {items[5].imgLabel}
+            </Button>
+          </S.Caption>
+        </S.Image6>
+      ) : (
+        <S.Image6 classe={classe}>
+          <Image
+            src={items[6].img}
+            role="img"
+            aria-label={items[6].title}
+            layout="fill"
+          />
+          <S.Caption>
+            <S.Title>{items[6].title}</S.Title>
+            <S.Subtitle
+              dangerouslySetInnerHTML={{ __html: items[6].subtitle }}
+            />
+            <Button as="a" href={items[6].imgLink} size="large">
+              {items[6].imgLabel}
+            </Button>
+          </S.Caption>
+        </S.Image6>
+      )}
     </S.Wrapper>
   )
 }

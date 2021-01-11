@@ -16,14 +16,16 @@ const Areas = ({ bannerGrid }: AreaTemplateProps) => {
   return (
     <section>
       <Menu />
-      <Container>
-        <S.SectionHeadings>
-          <Heading color="white" lineColor="heading" lineLeft>
-            Areas de atuação
-          </Heading>
-        </S.SectionHeadings>
-        <BannerGrid items={bannerGrid} />
-      </Container>
+      <S.SectionBanner>
+        <Container>
+          <S.SectionHeadings>
+            <Heading color="white" lineColor="heading" lineLeft>
+              Areas de atuação
+            </Heading>
+          </S.SectionHeadings>
+          <BannerGrid items={bannerGrid} classe={true} />
+        </Container>
+      </S.SectionBanner>
       <S.SectionFooter>
         <Container>
           <Footer />
