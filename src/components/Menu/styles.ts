@@ -12,7 +12,7 @@ const wrapperModifiers = {
     color: ${theme.colors.black};
     transform: translate(0%, 0%);
     svg {
-      width: 280px;
+      width: 300px;
     }
     ${TopBar} {
       transform: translate(-50%, -50%);

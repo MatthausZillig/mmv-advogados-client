@@ -44,7 +44,7 @@ export const Card = styled.div`
 `
 
 export const Map = styled.div`
-  height: 44vh;
+  height: 46.7vh;
   width: 100%;
 `
 export const Marker = styled(Googlemaps)`

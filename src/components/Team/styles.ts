@@ -57,6 +57,11 @@ export const Card = styled.div`
       transform: translate3d(0, -5px, 0);
       box-shadow: 0 1.5rem 2.5rem rgba(22, 28, 45, 0.1),
         0 0.3rem 0.5rem -0.5rem rgba(22, 28, 45, 0.05) !important;
+      ${Avatar} {
+        box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.2);
+        width: 114px;
+        height: 114px;
+      }
     }
   `}
 `

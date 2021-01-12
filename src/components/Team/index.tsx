@@ -31,6 +31,7 @@ const Team = ({ items }: TeamProps) => (
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'space-evenly',
+              alignItems: 'flex-start',
               width: '220px'
             }}
           >

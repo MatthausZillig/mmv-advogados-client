@@ -27,6 +27,11 @@ export const Socio = styled.div`
       &:hover {
         transform: translate3d(0,-5px,0);
         box-shadow: 0 1.5rem 2.5rem rgba(22,28,45,.1),0 .3rem 0.5rem -.50rem rgba(22,28,45,.05) !important;
+        ${Avatar} {
+          box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.2);
+          width: 120px;
+          height: 120px;
+        }
       }
     }
   `}
@@ -36,13 +41,14 @@ export const Avatar = styled.div`
   ${({ theme }) => css`
     overflow: hidden;
     width: 110px;
-    border: 4px solid ${theme.colors.white};
+    border: 4px solid #fafafa;
     height: 110px;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
     border-radius: 100%;
     object-fit: cover;
     background-color: ${theme.colors.white};
     margin-bottom: ${theme.spacings.small};
+    transition: all ease-in-out;
   `}
 `
 

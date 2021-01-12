@@ -40,7 +40,7 @@
     imgLink: '/areas'
   },
   {
-    img: '/img/civil.jpg',
+    img: '/img/family.jpg',
     title: 'Direito de Familía',
     subtitle: 'Assessoria Jurídica',
     imgLabel: 'Saiba mais',

@@ -17,10 +17,10 @@ const CookiePolicy = () => {
   return (
     <S.Wrapper close={isclose}>
       <div>
-        <p>Este site salva seu histórico de uso.</p>
         <p>
-          Ao continuar navegando você concorda com a política de privacidade.
+          Este site salva os <b>Cookies</b> de navegação.
         </p>
+        <p>Ao continuar você concorda com a política de privacidade.</p>
       </div>
       <S.WrapperButtons>
         <Button onClick={handleClose}>Aceitar</Button>

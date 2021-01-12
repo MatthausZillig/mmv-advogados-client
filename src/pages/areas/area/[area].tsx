@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 
 const Area = () => {
   const router = useRouter()
-  console.log(router.query)
+  console.log(router)
 
   return (
     <>
