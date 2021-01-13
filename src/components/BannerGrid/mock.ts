@@ -7,18 +7,18 @@
     imgLink: '/areas/area/imobiliario'
   },
   {
-    img: '/img/empresarial.jpeg',
-    title: 'Direito Empresarial',
-    subtitle: 'Assessoria Jurídica',
-    imgLabel: 'Saiba mais',
-    imgLink: '/areas/area/empresarial'
-  },
-  {
     img: '/img/industrial.jpg',
     title: 'Direito do Trabalho',
     subtitle: 'Assessoria Jurídica',
     imgLabel: 'Saiba mais',
     imgLink: '/areas/area/trabalho'
+  },
+  {
+    img: '/img/empresarial.jpeg',
+    title: 'Direito Empresarial',
+    subtitle: 'Assessoria Jurídica',
+    imgLabel: 'Saiba mais',
+    imgLink: '/areas/area/empresarial'
   },
   {
     img: '/img/mercado.jpg',
