@@ -21,6 +21,7 @@ export const Socio = styled.div`
       border-radius: ${theme.border.radius};
       padding: ${theme.spacings.medium};
       text-align: left;
+      margin-bottom: 4rem;
       ${media.lessThan('medium')`
         width: 100%
       `}

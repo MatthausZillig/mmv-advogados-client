@@ -6,6 +6,7 @@ import * as S from './styles'
 import Logo from 'components/Logo'
 import Button from 'components/Button'
 import MediaMatch from 'components/MediaMatch'
+import ContactForm from 'components/ContactForm'
 
 export type MenuProps = {
   inScroll?: boolean
@@ -13,6 +14,7 @@ export type MenuProps = {
 
 const Menu = () => {
   const [navbar, setNavbar] = useState(false)
+  const [isActive, setIsActive] = useState(false)
 
   if (typeof window !== 'undefined') {
     const changeBackground = () => {
@@ -27,6 +29,7 @@ const Menu = () => {
 
   return (
     <>
+      <ContactForm active={isActive} set={setIsActive} />
       <S.TopBar>
         <div>
           <p>Contato:</p>
@@ -48,22 +51,19 @@ const Menu = () => {
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="/escritorio">Escritório</Link>
+                <Link href="/Escritorio">Escritório</Link>
               </li>
               <li>
                 <Link href="/areas">Áreas de atuação</Link>
               </li>
               <li>
-                <Link href="/">Sócios</Link>
-              </li>
-              <li>
-                <Link href="/trabalhe-conosco">Trabalhe conosco</Link>
+                <Link href="/Equipe">Sócios</Link>
               </li>
               <li>
                 <Link href="/blog">Blog</Link>
               </li>
               <li>
-                <Link href="/contato">Contato</Link>
+                <div onClick={() => setIsActive(!isActive)}>Contato</div>
               </li>
             </S.Ul>
           </MediaMatch>
@@ -104,7 +104,7 @@ const Menu = () => {
               <Link href="/blog">Blog</Link>
             </S.MenuLink>
           </S.MenuNav>
-          <Button>Contato</Button>
+          <Button onClick={() => setIsActive(!isActive)}>Contato</Button>
         </S.MenuWrapper>
       </S.Wrapper>
     </>
