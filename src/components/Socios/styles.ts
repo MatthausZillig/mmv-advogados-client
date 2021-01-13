@@ -12,7 +12,7 @@ export const Wrapper = styled.main`
 export const Socio = styled.div`
   ${({ theme }) => css`
       width: 38rem;
-      height: 60rem;
+      height: 65rem;
       background: rgb(247, 249, 250);
       display: flex;
       flex-direction: column;

@@ -4,6 +4,6 @@
   backgroundImage: '/img/fundo-vedana.png',
   floatImage: '/img/vedana.png',
   buttonLabel: 'Saiba mais',
-  buttonLink: '/socios',
+  buttonLink: '/Equipe',
   alignment: 'left'
 }

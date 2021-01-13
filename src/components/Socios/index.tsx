@@ -23,8 +23,8 @@ const Socios = ({ items }: SociosProps) => (
             src={item.img}
             role="img"
             aria-label="Rodrigo vedana"
-            width="100"
-            height="100"
+            width="100px"
+            height="100px"
             layout="responsive"
           />
         </S.Avatar>

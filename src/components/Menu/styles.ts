@@ -49,6 +49,7 @@ export const TopBar = styled.div`
     a {
       text-decoration: none;
       color: ${theme.colors.white} !important;
+      font-size: ${theme.font.sizes.large};
       font-weight: ${theme.font.bold} !important;
     }
     p {

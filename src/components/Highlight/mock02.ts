@@ -3,6 +3,6 @@
   backgroundImage: '/img/office.jpg',
   floatImage: '/img/zillig.png',
   buttonLabel: 'Saiba mais',
-  buttonLink: '/socios',
+  buttonLink: '/Equipe',
   alignment: 'right'
 }

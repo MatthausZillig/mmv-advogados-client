@@ -49,8 +49,8 @@ export const InputWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-bottom: ${theme.spacings.small};
-    margin-top: ${theme.spacings.small};
+    margin-bottom: ${theme.spacings.xsmall};
+    margin-top: ${theme.spacings.xsmall};
     input {
       width: 30rem;
       height: 4rem;

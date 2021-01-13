@@ -3,6 +3,6 @@
   backgroundImage: '/img/office_03.jpg',
   floatImage: '/img/ligia.png',
   buttonLabel: 'Saiba mais',
-  buttonLink: '/socios',
+  buttonLink: '/Equipe',
   alignment: 'left'
 }
