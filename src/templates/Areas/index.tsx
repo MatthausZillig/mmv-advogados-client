@@ -3,16 +3,16 @@ import Menu from 'components/Menu'
 import Heading from 'components/Heading'
 import Footer from 'components/Footer'
 import CookiePolicy from 'components/CookiePolicy'
-import { ImagesProps } from 'components/BannerGrid/ImagesTypes'
+import { Document } from 'prismic-javascript/types/documents'
 import { Container } from 'components/Container'
 
 import * as S from './styles'
 
 export type AreaTemplateProps = {
-  bannerGrid: ImagesProps[]
+  areas: Document[]
 }
 
-const Areas = ({ bannerGrid }: AreaTemplateProps) => {
+const Areas = ({ areas }: AreaTemplateProps) => {
   return (
     <section>
       <Menu />
@@ -23,7 +23,7 @@ const Areas = ({ bannerGrid }: AreaTemplateProps) => {
               Areas de atuação
             </Heading>
           </S.SectionHeadings>
-          <BannerGrid items={bannerGrid} classe={true} />
+          <BannerGrid items={areas} classe={true} />
         </Container>
       </S.SectionBanner>
       <S.SectionFooter>

@@ -1,10 +1,10 @@
 import * as S from './styles'
-import Image from 'next/image'
-import Button from 'components/Button'
-import { ImagesProps } from './ImagesTypes'
 
+import Button from 'components/Button'
+import { RichText } from 'prismic-reactjs'
+import { Document } from 'prismic-javascript/types/documents'
 export type BannerGridProps = {
-  items: ImagesProps[]
+  items: Document[]
   classe?: boolean
 }
 
@@ -12,115 +12,70 @@ function BannerGrid({ items, classe = false }: BannerGridProps) {
   return (
     <S.Wrapper classe={classe}>
       <S.Image>
-        <Image
-          src={items[0].img}
-          role="img"
-          aria-label={items[0].title}
-          layout="fill"
-        />
+        <img src={items[0].data.img.url} role="img" aria-label="img" />
         <S.Caption>
-          <S.Title>{items[0].title}</S.Title>
-          <S.Subtitle dangerouslySetInnerHTML={{ __html: items[0].subtitle }} />
-          <Button as="a" href={items[0].imgLink} size="large">
-            {items[0].imgLabel}
+          <S.Title>{RichText.render(items[0].data.title)}</S.Title>
+          <S.Subtitle>{items[0].data.subtitle}</S.Subtitle>
+          <Button as="a" href={items[0].data.imglink} size="large">
+            {items[0].data.imglabel}
           </Button>
         </S.Caption>
       </S.Image>
 
       <S.Image2>
-        <Image
-          src={items[1].img}
-          role="img"
-          aria-label={items[1].title}
-          layout="fill"
-        />
+        <img src={items[1].data.img.url} role="img" aria-label="img" />
         <S.Caption>
-          <S.Title>{items[1].title}</S.Title>
-          <S.Subtitle dangerouslySetInnerHTML={{ __html: items[1].subtitle }} />
-          <Button as="a" href={items[1].imgLink} size="large">
-            {items[1].imgLabel}
+          <S.Title>{RichText.render(items[1].data.title)}</S.Title>
+          <S.Subtitle>{items[1].data.subtitle}</S.Subtitle>
+
+          <Button as="a" href={items[1].data.imglink} size="large">
+            {items[1].data.imglabel}
           </Button>
         </S.Caption>
       </S.Image2>
 
       <S.Image3>
-        <Image
-          src={items[2].img}
-          role="img"
-          aria-label={items[2].title}
-          layout="fill"
-        />
+        <img src={items[2].data.img.url} role="img" aria-label="img" />
         <S.Caption>
-          <S.Title>{items[2].title}</S.Title>
-          <S.Subtitle dangerouslySetInnerHTML={{ __html: items[2].subtitle }} />
-          <Button as="a" href={items[2].imgLink} size="large">
-            {items[2].imgLabel}
+          <S.Title>{RichText.render(items[2].data.title)}</S.Title>
+          <S.Subtitle>{items[2].data.subtitle}</S.Subtitle>
+          <Button as="a" href={items[2].data.imglink} size="large">
+            {items[2].data.imglabel}
           </Button>
         </S.Caption>
       </S.Image3>
 
       <S.Image4>
-        <Image
-          src={items[3].img}
-          role="img"
-          aria-label={items[3].title}
-          layout="fill"
-        />
+        <img src={items[3].data.img.url} role="img" aria-label="img" />
         <S.Caption>
-          <S.Title>{items[3].title}</S.Title>
-          <S.Subtitle dangerouslySetInnerHTML={{ __html: items[3].subtitle }} />
-          <Button as="a" href={items[3].imgLink} size="large">
-            {items[3].imgLabel}
+          <S.Title>{RichText.render(items[3].data.title)}</S.Title>
+          <S.Subtitle>{items[3].data.subtitle}</S.Subtitle>
+          <Button as="a" href={items[3].data.imglink} size="large">
+            {items[3].data.imglabel}
           </Button>
         </S.Caption>
       </S.Image4>
 
       <S.Image5>
-        <Image
-          src={items[4].img}
-          role="img"
-          aria-label={items[4].title}
-          layout="fill"
-        />
+        <img src={items[4].data.img.url} role="img" aria-label="img" />
         <S.Caption>
-          <S.Title>{items[4].title}</S.Title>
-          <S.Subtitle dangerouslySetInnerHTML={{ __html: items[4].subtitle }} />
-          <Button as="a" href={items[4].imgLink} size="large">
-            {items[4].imgLabel}
+          <S.Title>{RichText.render(items[4].data.title)}</S.Title>
+          <S.Subtitle>{items[4].data.subtitle}</S.Subtitle>
+          <Button as="a" href={items[4].data.imglink} size="large">
+            {items[4].data.imglabel}
           </Button>
         </S.Caption>
       </S.Image5>
-      {!classe ? (
-        <S.Image6>
-          <S.Caption>
-            <S.Title>{items[5].title}</S.Title>
-            <S.Subtitle
-              dangerouslySetInnerHTML={{ __html: items[5].subtitle }}
-            />
-            <Button as="a" href={items[5].imgLink} size="large">
-              {items[5].imgLabel}
-            </Button>
-          </S.Caption>
-        </S.Image6>
-      ) : (
-        <S.Image6 classe={classe}>
-          <Image
-            src={items[6].img}
-            role="img"
-            aria-label={items[6].title}
-            layout="fill"
-          />
-          <S.Caption>
-            <S.Title>{items[6].title}</S.Title>
-            <S.Subtitle
-              dangerouslySetInnerHTML={{ __html: items[6].subtitle }}
-            />
-            <Button as="a" href={items[6].imgLink} size="large">
-              {items[6].imgLabel}
-            </Button>
-          </S.Caption>
-        </S.Image6>
-      )}
+      <S.Image6 classe={classe}>
+        <img src={items[5].data.img.url} role="img" aria-label="img" />
+        <S.Caption>
+          <S.Title>{RichText.render(items[5].data.title)}</S.Title>
+          <S.Subtitle>{items[5].data.subtitle}</S.Subtitle>
+          <Button as="a" href={items[5].data.imglink} size="large">
+            {items[5].data.imglabel}
+          </Button>
+        </S.Caption>
+      </S.Image6>
     </S.Wrapper>
   )
 }

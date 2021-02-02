@@ -1,0 +1,7 @@
+{
+  "libraries": [
+    "@/slices",
+    "essential-slices"
+  ],
+  "_latest": "0.0.43"
+}
