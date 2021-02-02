@@ -78,22 +78,28 @@ const Menu = () => {
               <Link href="/areas">Áreas de atuação</Link>
               <S.MenuItensAreas>
                 <S.SubItens>
-                  <Link href="/areas/civil">Direito Civil</Link>
+                  <Link href="/areas/area/civil">Direito Civil</Link>
                 </S.SubItens>
                 <S.SubItens>
-                  <Link href="/areas/trabalho">Direito do Trabalho</Link>
+                  <Link href="/areas/area/trabalho">Direito do Trabalho</Link>
                 </S.SubItens>
                 <S.SubItens>
-                  <Link href="/areas/imobiliario">Direito Imobiliário</Link>
+                  <Link href="/areas/area/condominial">
+                    Direito Imobiliário
+                  </Link>
                 </S.SubItens>
                 <S.SubItens>
-                  <Link href="/areas/empresarial">Direito Empresarial</Link>
+                  <Link href="/areas/area/empresarial">
+                    Direito Empresarial
+                  </Link>
                 </S.SubItens>
                 <S.SubItens>
-                  <Link href="/areas/consumidor">Direito do Consumidor</Link>
+                  <Link href="/areas/area/consumidor">
+                    Direito do Consumidor
+                  </Link>
                 </S.SubItens>
                 <S.SubItens>
-                  <Link href="/areas/familia">Direito de Família</Link>
+                  <Link href="/areas/area/familia">Direito de Família</Link>
                 </S.SubItens>
               </S.MenuItensAreas>
             </S.MenuLink>
