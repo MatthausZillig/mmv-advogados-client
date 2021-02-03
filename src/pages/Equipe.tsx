@@ -1,16 +1,19 @@
 import Equipe, { EquipeTemplateProps } from 'templates/Equipe'
-import sociosMock from 'components/Socios/mock'
-import teamMock from 'components/Team/mock'
+import { GetStaticProps } from 'next'
+import { client } from 'lib/prismic'
+import Prismic from '@prismicio/client'
 
 export default function index(props: EquipeTemplateProps) {
   return <Equipe {...props} />
 }
 
-export function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
+  const equipe = await client().query(
+    Prismic.Predicates.at('document.type', 'equipe')
+  )
   return {
     props: {
-      socios: sociosMock,
-      team: teamMock
+      equipe: equipe && equipe.results
     }
   }
 }

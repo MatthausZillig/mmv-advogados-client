@@ -9,6 +9,46 @@ export const Wrapper = styled.main`
   flex-wrap: wrap;
 `
 
+export const Avatar = styled.div`
+  ${({ theme }) => css`
+    overflow: hidden;
+    width: 110px;
+    border: 4px solid #fafafa;
+    height: 110px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    object-fit: cover;
+    background-color: ${theme.colors.white};
+    margin-bottom: ${theme.spacings.small};
+    transition: all ease-in-out;
+    object-fit: cover;
+    img {
+      object-fit: cover;
+    }
+  `}
+`
+
+export const Title = styled.h4`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.medium};
+    font-weight: ${theme.font.bold};
+    color: ${theme.colors.black};
+  `}
+`
+
+export const Text = styled.p`
+  ${({ theme }) => css`
+    text-align: left;
+    font-size: ${theme.font.sizes.small};
+    font-weight: ${theme.font.normal};
+    color: ${theme.colors.black};
+    margin-bottom: ${theme.spacings.xsmall};
+    width: 30rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  `}
+`
+
 export const Socio = styled.div`
   ${({ theme }) => css`
       width: 38rem;
@@ -35,39 +75,5 @@ export const Socio = styled.div`
         }
       }
     }
-  `}
-`
-
-export const Avatar = styled.div`
-  ${({ theme }) => css`
-    overflow: hidden;
-    width: 110px;
-    border: 4px solid #fafafa;
-    height: 110px;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
-    border-radius: 100%;
-    object-fit: cover;
-    background-color: ${theme.colors.white};
-    margin-bottom: ${theme.spacings.small};
-    transition: all ease-in-out;
-  `}
-`
-
-export const Title = styled.h4`
-  ${({ theme }) => css`
-    font-size: ${theme.font.sizes.medium};
-    font-weight: ${theme.font.bold};
-    color: ${theme.colors.black};
-  `}
-`
-
-export const Text = styled.p`
-  ${({ theme }) => css`
-    text-align: left;
-    font-size: ${theme.font.sizes.small};
-    font-weight: ${theme.font.normal};
-    color: ${theme.colors.black};
-    margin-bottom: ${theme.spacings.xsmall};
-    width: 30rem;
   `}
 `

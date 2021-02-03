@@ -1,5 +1,4 @@
-import { SocioProps } from 'components/Socios'
-import { PeapleProps } from 'components/Team'
+import { Document } from 'prismic-javascript/types/documents'
 
 import { Container } from 'components/Container'
 
@@ -13,11 +12,10 @@ import Team from 'components/Team'
 import * as S from './styles'
 
 export type EquipeTemplateProps = {
-  socios: SocioProps[]
-  team: PeapleProps[]
+  equipe: Document[]
 }
 
-const Home = ({ socios, team }: EquipeTemplateProps) => (
+const Home = ({ equipe }: EquipeTemplateProps) => (
   <section>
     <Menu />
     <S.SectionTeam>
@@ -27,14 +25,14 @@ const Home = ({ socios, team }: EquipeTemplateProps) => (
             Conheça nossos socios
           </Heading>
         </S.SectionHeadings>
-        <Socios items={socios} />
+        <Socios items={equipe} />
         <S.SectionHeadingsTwo>
           <Heading lineLeft lineColor="heading" color="black">
             Conheça nosso time
           </Heading>
         </S.SectionHeadingsTwo>
 
-        <Team items={team} />
+        <Team items={equipe} />
       </Container>
     </S.SectionTeam>
     <S.SectionFooter>

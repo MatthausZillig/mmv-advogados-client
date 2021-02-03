@@ -1,4 +1,5 @@
-import Image from 'next/image'
+import { Document } from 'prismic-javascript/types/documents'
+
 import * as S from './styles'
 
 export type PeapleProps = {
@@ -8,22 +9,21 @@ export type PeapleProps = {
 }
 
 export type TeamProps = {
-  items: PeapleProps[]
+  items: Document[]
 }
 
 const Team = ({ items }: TeamProps) => (
   <S.Wrapper>
     {items.map((item) => (
-      <S.Card key={item.name}>
+      <S.Card key={item.data.name}>
         <div className="cardContainer">
           <S.Avatar>
-            <Image
-              src={item.img}
+            <img
+              src={item.data.img.url}
               role="img"
               aria-label="Rodrigo vedana"
-              width="100"
-              height="100"
-              layout="responsive"
+              width="120"
+              height="120"
             />
           </S.Avatar>
           <div
@@ -32,11 +32,12 @@ const Team = ({ items }: TeamProps) => (
               flexDirection: 'column',
               justifyContent: 'space-evenly',
               alignItems: 'flex-start',
-              width: '220px'
+              width: '220px',
+              textOverflow: 'ellipsis'
             }}
           >
-            <S.Title>{item.name}</S.Title>
-            <S.Text>{item.area}</S.Text>
+            <S.Title>{item.data.name}</S.Title>
+            <S.Text>{item.data.area}</S.Text>
           </div>
         </div>
       </S.Card>
