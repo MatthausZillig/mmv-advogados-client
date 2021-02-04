@@ -1,5 +1,6 @@
 import { Container } from 'components/Container'
-import { BannerProps } from 'components/Banner'
+import { Document } from 'prismic-javascript/types/documents'
+import { RichText } from 'prismic-reactjs'
 import Footer from 'components/Footer'
 import Heading from 'components/Heading'
 import Menu from 'components/Menu'
@@ -11,7 +12,7 @@ import CookiePolicy from 'components/CookiePolicy'
 import * as S from './styles'
 
 export type EscritorioTemplateProps = {
-  banner: BannerProps
+  banner: Document[]
 }
 
 const Escritorio = ({ banner }: EscritorioTemplateProps) => (
@@ -24,10 +25,10 @@ const Escritorio = ({ banner }: EscritorioTemplateProps) => (
       <Container>
         <S.SectionHeadings>
           <Heading lineLeft lineColor="heading" color="black">
-            Quem Somos
+            {RichText.render(banner[0].data.title)}
           </Heading>
         </S.SectionHeadings>
-        <QuemSomos />
+        <QuemSomos banner={banner} />
       </Container>
     </S.SectionQuemSomos>
     <S.SectionMaps>

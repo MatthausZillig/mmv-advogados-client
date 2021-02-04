@@ -16,5 +16,5 @@
     "jsx": "preserve"
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/Maps/index.jsx", "src/components/ContactForm/styles.js", "src/components/ContactForm/index.jsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/Maps/index.jsx", "src/components/ContactForm/styles.js", "src/components/ContactForm/index.jsx", "src/components/Banner/index.tsx"]
 }

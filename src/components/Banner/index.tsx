@@ -1,56 +1,34 @@
-import Image from 'next/image'
-
-import Ribbon, { RibbonColors, RibbonSizes } from 'components/Ribbon'
+import Ribbon from 'components/Ribbon'
+import { BannerEscProps } from 'components/BannerEscritorio'
+import { RichText } from 'prismic-reactjs'
 import Button from 'components/Button'
 
 import * as S from './styles'
 
-export type BannerProps = {
-  img: string
-  title: string
-  subtitle: string
-  buttonLabel?: string
-  buttonLink?: string
-  ribbon?: React.ReactNode
-  ribbonColor?: RibbonColors
-  ribbonSize?: RibbonSizes
-  type?: boolean
-  theClass: string
-}
-
-const Banner = ({
-  img,
-  title,
-  subtitle,
-  buttonLabel,
-  buttonLink,
-  ribbon,
-  type,
-  ribbonColor = 'heading',
-  ribbonSize = 'normal'
-}: BannerProps) => {
+const Banner = ({ item }: BannerEscProps) => {
+  console.log('banners', item)
   return (
     <S.Wrapper>
-      {!!ribbon && (
-        <Ribbon color={ribbonColor} size={ribbonSize}>
-          {ribbon}
+      {item[0] && item[0].data && item[0].data.ribbon && (
+        <Ribbon color={item[0].data.ribbonColor} size={item[0].data.ribbonSize}>
+          {item[0].data.ribbon}
         </Ribbon>
       )}
 
-      <Image
-        src={img}
+      <img
+        src={item[0].data.img.url}
         role="img"
-        aria-label={title}
-        width={type ? '1920px' : '1300px'}
+        width={item[0].data && item[0].data.type ? '1920px' : '1300px'}
         height="230px"
       />
-
       <S.Caption>
-        <S.Title>{title}</S.Title>
-        <S.Subtitle dangerouslySetInnerHTML={{ __html: subtitle }} />
-        {buttonLink && buttonLabel && (
-          <Button as="a" href={buttonLink} size="large">
-            {buttonLabel}
+        <S.Title>{RichText.render(item[0].data.title)}</S.Title>
+        <S.Subtitle
+          dangerouslySetInnerHTML={{ __html: item[0].data.subtitle }}
+        />
+        {item[0].data.buttonLink && item[0].data.buttonLabel && (
+          <Button as="a" href={item[0].data.buttonLink} size="large">
+            {item[0].data.buttonLabel}
           </Button>
         )}
       </S.Caption>

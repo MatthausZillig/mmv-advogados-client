@@ -151,9 +151,12 @@ export const Image2 = styled(Image)`
 
 export const Image3 = styled(Image)`
   position: relative;
+  h1 {
+    font-size: 1.8rem !important;
+  }
   h2,
   h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
   grid-area: tree;
 `
@@ -161,36 +164,42 @@ export const Image3 = styled(Image)`
 export const Image4 = styled(Image)`
   position: relative;
   grid-area: four;
+  h1 {
+    font-size: 1.8rem !important;
+  }
   h2,
   h3 {
-    font-size: 20px;
+    font-size: 1.8rem;
   }
 `
 
 export const Image5 = styled(Image)`
   position: relative;
   grid-area: five;
+  h1 {
+    font-size: 1.8rem !important;
+  }
   h2,
   h3 {
-    font-size: 20px;
+    font-size: 1.8rem;
   }
 `
 
 export const Image6 = styled(Image)<BannerType>`
-  ${({ classe }) => css`
-    grid-area: six;
-    background-color: rgba(0, 0, 0, 0.6);
-
-    a {
-      opacity: 1;
-    }
-    ${!!classe && WrapperModifiers.hover()};
-  `}
+  position: relative;
+  grid-area: six;
+  h1 {
+    font-size: 1.8rem !important;
+  }
+  h2,
+  h3 {
+    font-size: 1.8rem;
+  }
 `
 
 export const Title = styled.h2`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.large};
+    font-size: ${theme.font.sizes.medium};
     font-weight: ${theme.font.bold};
     color: ${theme.colors.white};
     ${media.greaterThan('medium')`

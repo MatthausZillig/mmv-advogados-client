@@ -1,14 +1,20 @@
 import Escritorio, { EscritorioTemplateProps } from 'templates/Escritorio'
-import bannerEscritorioMock from 'components/BannerEscritorio/mock'
+import { GetStaticProps } from 'next'
+import { client } from 'lib/prismic'
+import Prismic from '@prismicio/client'
 
 export default function index(props: EscritorioTemplateProps) {
   return <Escritorio {...props} />
 }
 
-export function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
+  const escritorio = await client().query(
+    Prismic.Predicates.at('document.type', 'escritorio')
+  )
+  console.log(escritorio.results)
   return {
     props: {
-      banner: bannerEscritorioMock
+      banner: escritorio && escritorio.results
     }
   }
 }

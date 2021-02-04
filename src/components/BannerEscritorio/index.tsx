@@ -1,13 +1,14 @@
 import * as S from './styles'
-import Banner, { BannerProps } from 'components/Banner'
+import { Document } from 'prismic-javascript/types/documents'
+import Banner from 'components/Banner'
 
 export type BannerEscProps = {
-  item: BannerProps
+  item: Document[]
 }
 
 const BannerEscritorio = ({ item }: BannerEscProps) => (
   <S.Wrapper>
-    <Banner {...item} />
+    <Banner item={item} />
   </S.Wrapper>
 )
 

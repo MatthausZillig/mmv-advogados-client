@@ -1,6 +1,5 @@
-import { BannerProps } from 'components/Banner'
 import BannerGrid from 'components/BannerGrid'
-import { ImagesProps } from 'components/BannerGrid/ImagesTypes'
+import { Document } from 'prismic-javascript/types/documents'
 import FeaturesArticles, {
   FeaturesArticlesProps
 } from 'components/FeaturesArticles'
@@ -20,8 +19,8 @@ import Slider, { SliderSettings } from 'components/Slider'
 import * as S from './styles'
 
 export type HomeTemplateProps = {
-  banners: BannerProps[]
-  bannerGrid: ImagesProps[]
+  banners: Document[]
+  bannerGrid: Document[]
   featureArticles: FeaturesArticlesProps[]
   monacoHightlight: HighlightProps
   mirandaHightlight: HighlightProps
