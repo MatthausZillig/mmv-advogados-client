@@ -1,4 +1,6 @@
-import Image from 'next/image'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Document } from 'prismic-javascript/types/documents'
+import { RichText } from 'prismic-reactjs'
 import * as S from './styles'
 import Heading from 'components/Heading'
 import MediaMatch from 'components/MediaMatch'
@@ -18,46 +20,48 @@ export type FeaturesArticlesProps = {
 }
 
 export type FeatureProps = {
-  items: FeaturesArticlesProps[]
+  items: Document[]
 }
 
-const FeaturesArticles = ({ items }: FeatureProps) => (
-  <S.Wrapper>
-    <S.FeatureTitle>
-      <Heading lineLeft>Novos Artigos</Heading>
-      <Button withBorder>Veja todos</Button>
-    </S.FeatureTitle>
-    <S.FeatureCard data-testid="card">
-      {items.map((item, index) => (
-        <S.FeatureBox key={index}>
-          <div style={{ maxHeight: '300px' }}>
-            <Image
-              src={item.img}
-              role="img"
-              aria-label={item.title}
-              width="538px"
-              height="300px"
-            />
-          </div>
-          <S.Card>
-            <div style={{ display: 'flex' }}>
-              {item.chips.map((chip, index) => (
-                <Chip key={index}>{chip}</Chip>
-              ))}
+const FeaturesArticles = ({ items }: FeatureProps) => {
+  console.log(items)
+  return (
+    <S.Wrapper>
+      <S.FeatureTitle>
+        <Heading lineLeft>Novos Artigos</Heading>
+        <Button withBorder>Veja todos</Button>
+      </S.FeatureTitle>
+      <S.FeatureCard data-testid="card">
+        {items.map((item, index) => (
+          <S.FeatureBox key={index}>
+            <div style={{ maxHeight: '300px' }}>
+              <img
+                src={item.data.img.url}
+                role="img"
+                width="538px"
+                height="300px"
+              />
             </div>
-            <Heading>{item.title}</Heading>
-            <S.Subtitle> {item.subtitle}</S.Subtitle>
-            <p>{item.description}</p>
-          </S.Card>
-        </S.FeatureBox>
-      ))}
-      <MediaMatch lessThan="medium">
-        <Button as="a" href="/blog">
-          Veja todos
-        </Button>
-      </MediaMatch>
-    </S.FeatureCard>
-  </S.Wrapper>
-)
+            <S.Card>
+              <div style={{ display: 'flex' }}>
+                {item.data.chips.map((chip: any, index: any) => (
+                  <Chip key={index}>{chip.chip}</Chip>
+                ))}
+              </div>
+              <Heading>{RichText.render(item.data.title)}</Heading>
+              <S.Subtitle> {item.data.subtitle}</S.Subtitle>
+              <p>{RichText.render(item.data.description)}</p>
+            </S.Card>
+          </S.FeatureBox>
+        ))}
+        <MediaMatch lessThan="medium">
+          <Button as="a" href="/blog">
+            Veja todos
+          </Button>
+        </MediaMatch>
+      </S.FeatureCard>
+    </S.Wrapper>
+  )
+}
 
 export default FeaturesArticles

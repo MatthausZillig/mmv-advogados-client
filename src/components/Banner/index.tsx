@@ -6,7 +6,6 @@ import Button from 'components/Button'
 import * as S from './styles'
 
 const Banner = ({ item }: BannerEscProps) => {
-  console.log('banners', item)
   return (
     <S.Wrapper>
       {item[0] && item[0].data && item[0].data.ribbon && (
