@@ -6,14 +6,14 @@ import * as HeadingStyles from 'components/Heading/styles'
 const Sections = styled.section`
   ${({ theme }) => css`
     ${HeadingStyles.Wrapper},
-
     margin-bottom: calc(${theme.spacings.small} * 2);
   `}
 `
 
-export const SectionBanner = styled.section`
+export const SectionArticles = styled(Sections)`
   ${({ theme }) => css`
     margin: ${theme.spacings.large} calc(-${theme.grid.gutter} / 2);
+
     ${media.lessThan('medium')`
       margin-top: 16rem;
     `}
@@ -28,6 +28,7 @@ export const SectionBanner = styled.section`
 export const SectionHeadings = styled(Sections)`
   ${({ theme }) => css`
     margin-bottom: calc(${theme.spacings.small} * 2);
+    margin-top: ${theme.spacings.medium};
   `}
 `
 

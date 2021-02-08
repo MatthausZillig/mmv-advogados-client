@@ -22,13 +22,22 @@ export const SectionImage = styled(Sections)`
   ${({ theme }) => css`
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     overflow: hidden;
     height: 45rem;
+    position: relative;
     img {
       object-fit: cover;
       object-position: bottom;
       margin-bottom: ${theme.spacings.medium};
+      width: 1200px;
+      ${media.lessThan('medium')`
+      width: 340px;
+    `}
     }
+    ${media.lessThan('medium')`
+      height: 100%;
+    `}
   `}
 `
 
@@ -49,6 +58,30 @@ export const SectionParagraph = styled(Sections)`
     li {
       text-decoration: none;
     }
+    ${media.lessThan('medium')`
+      padding: 2rem;
+    `}
+  `}
+`
+
+export const SectionBottonImage = styled.div`
+  ${({ theme }) => css`
+    position: absolute;
+    bottom: 0;
+    background: rgb(247, 249, 250);
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4rem;
+    font-size: ${theme.font.sizes.xsmall};
+    button {
+      margin-left: ${theme.spacings.xsmall};
+      outline: none;
+    }
+    ${media.lessThan('medium')`
+      padding: 2rem;
+    `}
   `}
 `
 

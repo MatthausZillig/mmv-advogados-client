@@ -34,11 +34,12 @@ export const SectionImage = styled(Sections)`
 
 export const SectionParagraph = styled(Sections)`
   ${({ theme }) => css`
-    padding: ${theme.spacings.large};
+    padding: ${theme.spacings.xxlarge};
     background-color: ${theme.colors.white};
     color: ${theme.colors.black};
     font-size: ${theme.font.sizes.large};
     border-radius: ${theme.border.radius};
+
     ul {
       margin-left: ${theme.spacings.medium};
     }
@@ -49,6 +50,9 @@ export const SectionParagraph = styled(Sections)`
     li {
       text-decoration: none;
     }
+    ${media.lessThan('medium')`
+      padding: 2rem;
+    `}
   `}
 `
 

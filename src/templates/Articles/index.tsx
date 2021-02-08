@@ -1,5 +1,5 @@
 import Menu from 'components/Menu'
-import FeaturesArticles from 'components/FeaturesArticles'
+import ArticlesCard from 'components/ArticlesCard'
 import Heading from 'components/Heading'
 import Footer from 'components/Footer'
 import CookiePolicy from 'components/CookiePolicy'
@@ -16,16 +16,16 @@ const Articles = ({ articles }: ArticlesTemplateProps) => {
   return (
     <section>
       <Menu />
-      <S.SectionBanner>
+      <S.SectionArticles>
         <Container>
           <S.SectionHeadings>
             <Heading color="white" lineColor="heading" lineLeft>
-              Areas de atuação
+              Artigos Recentes
             </Heading>
           </S.SectionHeadings>
-          <FeaturesArticles items={articles} />
+          <ArticlesCard items={articles} />
         </Container>
-      </S.SectionBanner>
+      </S.SectionArticles>
       <S.SectionFooter>
         <Container>
           <Footer />

@@ -44,6 +44,7 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-map-gl": "^6.0.3",
+    "react-share": "^4.3.1",
     "react-slick": "^0.27.13",
     "styled-components": "5.2.1",
     "styled-icons": "^10.22.0",
