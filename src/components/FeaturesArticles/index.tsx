@@ -29,7 +29,9 @@ const FeaturesArticles = ({ items }: FeatureProps) => {
     <S.Wrapper>
       <S.FeatureTitle>
         <Heading lineLeft>Novos Artigos</Heading>
-        <Button withBorder>Veja todos</Button>
+        <Button as="a" href="/blog" withBorder>
+          Veja todos
+        </Button>
       </S.FeatureTitle>
       <S.FeatureCard data-testid="card">
         {items.map((item, index) => (
@@ -44,13 +46,16 @@ const FeaturesArticles = ({ items }: FeatureProps) => {
             </div>
             <S.Card>
               <div style={{ display: 'flex' }}>
-                {item.data.chips.map((chip: any, index: any) => (
-                  <Chip key={index}>{chip.chip}</Chip>
-                ))}
+                {item &&
+                  item.data.chips.map((chip: any, index: any) => (
+                    <Chip key={index}>{chip.chip}</Chip>
+                  ))}
               </div>
               <Heading>{RichText.render(item.data.title)}</Heading>
               <S.Subtitle> {item.data.subtitle}</S.Subtitle>
-              <p>{RichText.render(item.data.description)}</p>
+              <p className="descrip">
+                {RichText.render(item.data.description)}
+              </p>
             </S.Card>
           </S.FeatureBox>
         ))}

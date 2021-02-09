@@ -2,8 +2,6 @@ import Home, { HomeTemplateProps } from 'templates/Home'
 import { GetStaticProps } from 'next'
 import { client } from 'lib/prismic'
 import Prismic from '@prismicio/client'
-import bannersMock from 'components/BannerSlider/mock'
-import featuresMock from 'components/FeaturesArticles/mock'
 import highlightMock from 'components/Highlight/mock'
 import highlightMock02 from 'components/Highlight/mock02'
 import highlightMock03 from 'components/Highlight/mock03'
@@ -16,12 +14,18 @@ export const getStaticProps: GetStaticProps = async () => {
   const areas = await client().query(
     Prismic.Predicates.at('document.type', 'areas')
   )
-  console.log(areas.results)
+  const banners = await client().query(
+    Prismic.Predicates.at('document.type', 'bannerhero')
+  )
+  const articles = await client().query(
+    Prismic.Predicates.at('document.type', 'articles')
+  )
+  console.log(banners.results)
   return {
     props: {
-      banners: bannersMock,
+      banners: banners && banners.results,
       bannerGrid: areas && areas.results,
-      featureArticles: featuresMock,
+      featureArticles: articles && articles.results,
       monacoHightlight: highlightMock,
       mirandaHightlight: highlightMock,
       vedanaHightlight: highlightMock,

@@ -1,10 +1,11 @@
 import * as S from './styles'
 
-import Banner, { BannerProps } from 'components/Banner'
+import Banner from 'components/Banner'
+import { Document } from 'prismic-javascript/types/documents'
 import Slider, { SliderSettings } from 'components/Slider'
 
 export type BannerSliderProps = {
-  items: BannerProps[]
+  items: Document[]
 }
 
 const settings: SliderSettings = {
@@ -25,14 +26,22 @@ const settings: SliderSettings = {
   ]
 }
 
-const BannerSlider = ({ items }: BannerSliderProps) => (
-  <S.Wrapper>
-    <Slider settings={settings}>
-      {items.map((item) => (
-        <Banner key={item.title} {...item}></Banner>
-      ))}
-    </Slider>
-  </S.Wrapper>
-)
+const BannerSlider = ({ items }: BannerSliderProps) => {
+  console.log(items)
+  return (
+    <S.Wrapper>
+      <Slider settings={settings}>
+        {items.map((item) => (
+          <Banner
+            key={item.data.title}
+            item={items}
+            itemHome={item}
+            type="home"
+          ></Banner>
+        ))}
+      </Slider>
+    </S.Wrapper>
+  )
+}
 
 export default BannerSlider

@@ -11,7 +11,6 @@ export const getStaticProps: GetStaticProps = async () => {
   const areas = await client().query(
     Prismic.Predicates.at('document.type', 'areas')
   )
-  console.log(areas.results)
   return {
     props: {
       areas: areas && areas.results

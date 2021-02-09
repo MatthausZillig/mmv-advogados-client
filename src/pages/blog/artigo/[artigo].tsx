@@ -7,6 +7,7 @@ import {
   LinkedinIcon,
   WhatsappIcon
 } from 'react-share'
+import { ArrowBackOutline } from '@styled-icons/evaicons-outline/ArrowBackOutline'
 import { client } from 'lib/prismic'
 import { RichText } from 'prismic-reactjs'
 import Prismic from '@prismicio/client'
@@ -14,6 +15,7 @@ import { Document } from 'prismic-javascript/types/documents'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Chip from 'components/Chip'
 import { Container } from 'components/Container'
+import Button from 'components/Button'
 import Menu from 'components/Menu'
 import Heading from 'components/Heading'
 import Footer from 'components/Footer'
@@ -25,7 +27,6 @@ interface PropTypes {
 }
 
 const Article = ({ articleOf }: PropTypes) => {
-  console.log(articleOf)
   return (
     <section>
       <Menu />
@@ -34,6 +35,14 @@ const Article = ({ articleOf }: PropTypes) => {
           <Heading lineBottom lineColor="heading" color="white">
             {RichText.render(articleOf.data.title)}
           </Heading>
+          <Button
+            as="a"
+            href={`/blog`}
+            size="medium"
+            icon={<ArrowBackOutline />}
+          >
+            Voltar
+          </Button>
         </Container>
       </S.SectionHeadings>
       <Container>

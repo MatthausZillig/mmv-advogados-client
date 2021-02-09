@@ -11,7 +11,6 @@ export const getStaticProps: GetStaticProps = async () => {
   const articles = await client().query(
     Prismic.Predicates.at('document.type', 'articles')
   )
-  console.log(articles.results)
   return {
     props: {
       articles: articles && articles.results

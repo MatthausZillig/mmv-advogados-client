@@ -75,9 +75,11 @@ export const Card = styled.div`
   box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.1);
   margin-top: -48px;
   border-radius: 8px;
-  /* ${media.lessThan('medium')`
-    width: 300px;
-  `} */
+  .descrip {
+    height: 20rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 `
 
 export const FeatureCard = styled.div`

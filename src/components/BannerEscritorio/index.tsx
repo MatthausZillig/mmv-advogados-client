@@ -4,6 +4,8 @@ import Banner from 'components/Banner'
 
 export type BannerEscProps = {
   item: Document[]
+  itemHome?: Document
+  type?: string
 }
 
 const BannerEscritorio = ({ item }: BannerEscProps) => (

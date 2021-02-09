@@ -28,7 +28,7 @@ const WrapperModifiers = {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: ${theme.colors.primary};
+    color: ${theme.colors.white};
     background: none;
     box-shadow: none;
     :hover svg {
@@ -44,7 +44,7 @@ const WrapperModifiers = {
     }
     svg {
       width: 1.5rem;
-      margin-left: ${theme.spacings.xxsmall};
+      margin-left: ${theme.spacings.xsmall};
     }
   `,
   withBorder: (theme: DefaultTheme) => css`

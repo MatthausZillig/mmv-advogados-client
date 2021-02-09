@@ -5,8 +5,8 @@ import Button from 'components/Button'
 
 import * as S from './styles'
 
-const Banner = ({ item }: BannerEscProps) => {
-  return (
+const Banner = ({ item, itemHome, type }: BannerEscProps) => {
+  return type !== 'home' ? (
     <S.Wrapper>
       {item[0] && item[0].data && item[0].data.ribbon && (
         <Ribbon color={item[0].data.ribbonColor} size={item[0].data.ribbonSize}>
@@ -28,6 +28,39 @@ const Banner = ({ item }: BannerEscProps) => {
         {item[0].data.buttonLink && item[0].data.buttonLabel && (
           <Button as="a" href={item[0].data.buttonLink} size="large">
             {item[0].data.buttonLabel}
+          </Button>
+        )}
+      </S.Caption>
+    </S.Wrapper>
+  ) : (
+    <S.Wrapper>
+      {itemHome && itemHome.data && itemHome.data.ribbon && (
+        <Ribbon
+          color={itemHome.data.ribbonColor}
+          size={itemHome.data.ribbonSize}
+        >
+          {itemHome.data.ribbon}
+        </Ribbon>
+      )}
+
+      <img
+        src={itemHome && itemHome.data.img.url}
+        role="img"
+        width={
+          itemHome && itemHome.data && itemHome.data.type ? '1920px' : '1300px'
+        }
+        height="230px"
+      />
+      <S.Caption>
+        <S.Title>{RichText.render(itemHome && itemHome.data.title)}</S.Title>
+        <S.Subtitle
+          dangerouslySetInnerHTML={{
+            __html: itemHome && itemHome.data.subtitle
+          }}
+        />
+        {itemHome && itemHome.data.buttonLink && itemHome.data.buttonLabel && (
+          <Button as="a" href={itemHome.data.buttonLink} size="large">
+            {itemHome.data.buttonLabel}
           </Button>
         )}
       </S.Caption>

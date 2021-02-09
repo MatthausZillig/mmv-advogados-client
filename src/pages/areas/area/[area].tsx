@@ -66,7 +66,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (context: any) => {
   const { area } = context.params
   const areaOfAreas = await client().getByUID('area', area, {})
-  console.log(context.params)
+
   return {
     props: {
       areaOfAreas: areaOfAreas

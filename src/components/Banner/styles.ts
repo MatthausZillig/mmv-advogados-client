@@ -32,7 +32,7 @@ export const Caption = styled.div`
     ${media.greaterThan('medium')`
       padding: ${theme.spacings.large};
       position: absolute;
-      bottom: 7px;
+      bottom: 0;
       left: 0;
     `}
   `}

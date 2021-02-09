@@ -11,7 +11,6 @@ export const getStaticProps: GetStaticProps = async () => {
   const escritorio = await client().query(
     Prismic.Predicates.at('document.type', 'escritorio')
   )
-  console.log(escritorio.results)
   return {
     props: {
       banner: escritorio && escritorio.results
