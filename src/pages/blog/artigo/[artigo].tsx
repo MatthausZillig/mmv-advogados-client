@@ -94,7 +94,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   )
   const paths = articles.results.map((article) => {
     return {
-      params: { artigo: article.uid }
+      params: { artigo: article?.uid }
     }
   })
 

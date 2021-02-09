@@ -53,7 +53,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   const paths = areas.results.map((area) => {
     return {
-      params: { area: area.uid }
+      params: { area: area?.uid }
     }
   })
 
