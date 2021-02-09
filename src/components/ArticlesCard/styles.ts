@@ -44,7 +44,7 @@ export const ArticleImage = styled.div`
   span {
     display: inline-block;
     height: 400px;
-    width: 100%;
+    width: 597px;
     ${media.lessThan('medium')`
     overflow: hidden;
     height: 300px;
@@ -57,6 +57,7 @@ export const ArticleImage = styled.div`
     overflow: hidden;
     border-radius: 0;
     height: 300px
+    max-width: 597px;
   `}
   }
 `

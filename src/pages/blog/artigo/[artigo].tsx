@@ -10,9 +10,8 @@ import {
 import { ArrowBackOutline } from '@styled-icons/evaicons-outline/ArrowBackOutline'
 import { client } from 'lib/prismic'
 import { RichText } from 'prismic-reactjs'
-import Prismic from '@prismicio/client'
 import { Document } from 'prismic-javascript/types/documents'
-import { GetStaticPaths, GetStaticProps } from 'next'
+import { GetServerSideProps } from 'next'
 import Chip from 'components/Chip'
 import { Container } from 'components/Container'
 import Button from 'components/Button'
@@ -88,23 +87,7 @@ const Article = ({ articleOf }: PropTypes) => {
 
 export default Article
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const articles = await client().query(
-    Prismic.Predicates.at('document.type', 'articles')
-  )
-  const paths = articles.results.map((article) => {
-    return {
-      params: { artigo: article?.uid }
-    }
-  })
-
-  return {
-    paths,
-    fallback: false
-  }
-}
-
-export const getStaticProps: GetStaticProps = async (context: any) => {
+export const getServerSideProps: GetServerSideProps = async (context: any) => {
   const { artigo } = context.params
   const articleOf = await client().getByUID('articles', artigo, {})
   return {

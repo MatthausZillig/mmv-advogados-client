@@ -1,10 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { client } from 'lib/prismic'
 import { RichText } from 'prismic-reactjs'
-import Prismic from '@prismicio/client'
 import { Document } from 'prismic-javascript/types/documents'
 import { ArrowBackOutline } from '@styled-icons/evaicons-outline/ArrowBackOutline'
-import { GetStaticPaths, GetStaticProps } from 'next'
+import { GetServerSideProps } from 'next'
 import { Container } from 'components/Container'
 import Button from 'components/Button'
 import Menu from 'components/Menu'
@@ -56,24 +55,7 @@ const Area = ({ areaOfAreas }: PropTypes) => {
 
 export default Area
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const areas = await client().query(
-    Prismic.Predicates.at('document.type', 'areas')
-  )
-
-  const paths = areas.results.map((area) => {
-    return {
-      params: { area: area?.uid }
-    }
-  })
-
-  return {
-    paths,
-    fallback: false
-  }
-}
-
-export const getStaticProps: GetStaticProps = async (context: any) => {
+export const getServerSideProps: GetServerSideProps = async (context: any) => {
   const { area } = context.params
   const areaOfAreas = await client().getByUID('area', area, {})
 
