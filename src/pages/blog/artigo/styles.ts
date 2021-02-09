@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 import * as HeadingStyles from 'components/Heading/styles'
 
-const Sections = styled.section`
+export const Sections = styled.section`
   ${({ theme }) => css`
     ${HeadingStyles.Wrapper},
 
