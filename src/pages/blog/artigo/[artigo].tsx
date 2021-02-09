@@ -92,7 +92,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const articles = await client().query(
     Prismic.Predicates.at('document.type', 'articles')
   )
-  console.log(articles.results)
   const paths = articles.results.map((article) => {
     return {
       params: { artigo: article.uid }
@@ -101,13 +100,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true
+    fallback: false
   }
 }
 
 export const getStaticProps: GetStaticProps = async (context: any) => {
   const { artigo } = context.params
-  console.log(artigo)
   const articleOf = await client().getByUID('articles', artigo, {})
   return {
     props: {
