@@ -9,7 +9,7 @@ import Menu from 'components/Menu'
 import Heading from 'components/Heading'
 import Footer from 'components/Footer'
 
-import * as S from './styles'
+import * as S from 'templates/Areas/styles2'
 
 interface PropTypes {
   areaOfAreas: Document

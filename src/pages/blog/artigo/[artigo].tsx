@@ -20,7 +20,7 @@ import Menu from 'components/Menu'
 import Heading from 'components/Heading'
 import Footer from 'components/Footer'
 
-import * as S from './styles'
+import * as S from 'templates/Articles/styles2'
 
 interface PropTypes {
   articleOf: Document
