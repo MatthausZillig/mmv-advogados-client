@@ -15,6 +15,11 @@ export const SectionHeadings = styled(Sections)`
   ${({ theme }) => css`
     margin-bottom: calc(${theme.spacings.small} * 2);
     margin-top: 22rem;
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   `}
 `
 

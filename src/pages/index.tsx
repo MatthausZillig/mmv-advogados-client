@@ -1,5 +1,5 @@
 import Home, { HomeTemplateProps } from 'templates/Home'
-import { GetStaticProps } from 'next'
+import { GetServerSideProps } from 'next'
 import { client } from 'lib/prismic'
 import Prismic from '@prismicio/client'
 import highlightMock from 'components/Highlight/mock'
@@ -10,7 +10,7 @@ export default function index(props: HomeTemplateProps) {
   return <Home {...props} />
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const areas = await client().query(
     Prismic.Predicates.at('document.type', 'areas')
   )
@@ -18,9 +18,9 @@ export const getStaticProps: GetStaticProps = async () => {
     Prismic.Predicates.at('document.type', 'bannerhero')
   )
   const articles = await client().query(
-    Prismic.Predicates.at('document.type', 'articles')
+    Prismic.Predicates.at('document.type', 'articles'),
+    { orderings: '[document.last_publication_date desc]' }
   )
-  console.log(banners.results)
   return {
     props: {
       banners: banners && banners.results,

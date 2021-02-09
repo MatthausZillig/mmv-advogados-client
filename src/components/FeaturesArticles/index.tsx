@@ -24,7 +24,18 @@ export type FeatureProps = {
 }
 
 const FeaturesArticles = ({ items }: FeatureProps) => {
+  if (!items) {
+    return null
+  }
   console.log(items)
+  const firstTwoItens = items.map((item: any, index: any) => {
+    return index < 2 && item
+  })
+
+  const filtered = firstTwoItens.filter((item: any) => {
+    return item
+  })
+
   return (
     <S.Wrapper>
       <S.FeatureTitle>
@@ -34,31 +45,32 @@ const FeaturesArticles = ({ items }: FeatureProps) => {
         </Button>
       </S.FeatureTitle>
       <S.FeatureCard data-testid="card">
-        {items.map((item, index) => (
-          <S.FeatureBox key={index}>
-            <div style={{ maxHeight: '300px' }}>
-              <img
-                src={item.data.img.url}
-                role="img"
-                width="538px"
-                height="300px"
-              />
-            </div>
-            <S.Card>
-              <div style={{ display: 'flex' }}>
-                {item &&
-                  item.data.chips.map((chip: any, index: any) => (
+        {items &&
+          filtered &&
+          filtered.map((item, index) => (
+            <S.FeatureBox key={index}>
+              <div style={{ maxHeight: '300px' }}>
+                <img
+                  src={item.data.img.url}
+                  role="img"
+                  width="538px"
+                  height="300px"
+                />
+              </div>
+              <S.Card>
+                <div style={{ display: 'flex' }}>
+                  {item.data.chips.map((chip: any, index: any) => (
                     <Chip key={index}>{chip.chip}</Chip>
                   ))}
-              </div>
-              <Heading>{RichText.render(item.data.title)}</Heading>
-              <S.Subtitle> {item.data.subtitle}</S.Subtitle>
-              <p className="descrip">
-                {RichText.render(item.data.description)}
-              </p>
-            </S.Card>
-          </S.FeatureBox>
-        ))}
+                </div>
+                <h1>{RichText.render(item.data.title)}</h1>
+                <S.Subtitle> {item.data.subtitle}</S.Subtitle>
+                <p className="descrip">
+                  {RichText.render(item.data.description)}
+                </p>
+              </S.Card>
+            </S.FeatureBox>
+          ))}
         <MediaMatch lessThan="medium">
           <Button as="a" href="/blog">
             Veja todos

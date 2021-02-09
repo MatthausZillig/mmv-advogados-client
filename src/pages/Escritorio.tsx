@@ -1,5 +1,5 @@
 import Escritorio, { EscritorioTemplateProps } from 'templates/Escritorio'
-import { GetStaticProps } from 'next'
+import { GetServerSideProps } from 'next'
 import { client } from 'lib/prismic'
 import Prismic from '@prismicio/client'
 
@@ -7,7 +7,7 @@ export default function index(props: EscritorioTemplateProps) {
   return <Escritorio {...props} />
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const escritorio = await client().query(
     Prismic.Predicates.at('document.type', 'escritorio')
   )
