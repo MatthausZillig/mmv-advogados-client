@@ -15,6 +15,7 @@ const ContactForm = ({ active, set }) => {
     areas: '',
     como: ''
   })
+  const [statusFeedback, setStatusFeedback] = useState(false)
 
   // Update inputs value
   const handleParam = () => (e) => {
@@ -32,21 +33,32 @@ const ContactForm = ({ active, set }) => {
     Object.entries(query).forEach(([key, value]) => {
       formData.append(key, value)
     })
-    console.log(formData)
+
     fetch('https://getform.io/f/5d69d6ef-4847-4b5d-a7f0-11a44ab717e9', {
       method: 'POST',
       body: formData
-    }).then(() =>
-      setQuery({
-        name: '',
-        email: '',
-        message: '',
-        phone: '',
-        assunto: '',
-        areas: '',
-        como: ''
+    })
+      .then(
+        () =>
+          setQuery({
+            name: '',
+            email: '',
+            message: '',
+            phone: '',
+            assunto: '',
+            areas: '',
+            como: ''
+          }),
+        setStatusFeedback(true)
+      )
+      .catch(() => {
+        alert('Ocorreu um erro, tente novamente')
       })
-    )
+  }
+
+  const handleModal = () => {
+    set(!active)
+    setStatusFeedback(false)
   }
 
   return (
@@ -153,6 +165,12 @@ const ContactForm = ({ active, set }) => {
         <Button fullWidth type="submit">
           Enviar
         </Button>
+        {statusFeedback && (
+          <S.Modal>
+            Mensagem enviada com sucesso
+            <S.CloseModal onClick={handleModal} />
+          </S.Modal>
+        )}
       </form>
     </S.Wrapper>
   )

@@ -36,10 +36,29 @@ export const CloseWrapper = styled.button`
   outline: none;
 `
 
+export const Modal = styled.div`
+  margin-top: 0.8rem;
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3cd3c1;
+  color: white;
+  z-index: 2000;
+`
+
 export const Close = styled(CloseOutline)`
   color: black;
   width: 30px;
   height: 30px;
+  cursor: pointer;
+`
+export const CloseModal = styled(CloseOutline)`
+  color: white;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
 `
 
