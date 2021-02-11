@@ -26,6 +26,7 @@ interface PropTypes {
 }
 
 const Article = ({ articleOf }: PropTypes) => {
+  console.log(articleOf)
   return (
     <section>
       <Menu />
@@ -50,13 +51,19 @@ const Article = ({ articleOf }: PropTypes) => {
             <img src={articleOf.data.img.url} role="img" aria-label="img" />
             <S.SectionBottonImage>
               Compartilhe:{' '}
-              <FacebookShareButton url="https://www.ylaw.ca/blog/parenting-covid19-courts-provincial-health-guidelines-bc/">
+              <FacebookShareButton
+                url={`https://mmv-advogados-homologation.vercel.app/blog/artigo/${articleOf.uid}`}
+              >
                 <FacebookIcon size={32} round={true} />
               </FacebookShareButton>
-              <LinkedinShareButton url="https://www.ylaw.ca/blog/parenting-covid19-courts-provincial-health-guidelines-bc/">
+              <LinkedinShareButton
+                url={`https://mmv-advogados-homologation.vercel.app/blog/artigo/${articleOf.uid}`}
+              >
                 <LinkedinIcon size={32} round={true} />
               </LinkedinShareButton>
-              <WhatsappShareButton url="https://www.ylaw.ca/blog/parenting-covid19-courts-provincial-health-guidelines-bc/">
+              <WhatsappShareButton
+                url={`https://mmv-advogados-homologation.vercel.app/blog/artigo/${articleOf.uid}`}
+              >
                 <WhatsappIcon size={32} round={true} />
               </WhatsappShareButton>
             </S.SectionBottonImage>
