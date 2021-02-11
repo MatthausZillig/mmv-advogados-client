@@ -44,8 +44,8 @@ const Socios = ({ items }: SociosProps) => {
             <S.Text>{RichText.render(item.data.formation)}</S.Text>
             <S.Title>Títulos Profissionais</S.Title>
             <S.Text>{RichText.render(item.data.titles)}</S.Text>
-            <S.Title>Idiomas</S.Title>
-            <S.Text>{item.data.languages}</S.Text>
+            {/* <S.Title>Idiomas</S.Title>
+            <S.Text>{item.data.languages}</S.Text> */}
           </div>
         </S.Socio>
       ))}

@@ -58,9 +58,9 @@ const Banner = ({ item, itemHome, type }: BannerEscProps) => {
             __html: itemHome && itemHome.data.subtitle
           }}
         />
-        {itemHome && itemHome.data.buttonLink && itemHome.data.buttonLabel && (
-          <Button as="a" href={itemHome.data.buttonLink} size="large">
-            {itemHome.data.buttonLabel}
+        {itemHome && itemHome.data.buttonlink && itemHome.data.buttonlabel && (
+          <Button as="a" href={itemHome.data.buttonlink} size="large">
+            {itemHome.data.buttonlabel}
           </Button>
         )}
       </S.Caption>
