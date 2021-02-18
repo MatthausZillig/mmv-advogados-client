@@ -23,7 +23,7 @@ function BannerGrid({ items, classe = false }: BannerGridProps) {
         />
         <S.Caption>
           <S.Title>{RichText.render(handleBannerOrder[0].data.title)}</S.Title>
-          <S.Subtitle>{handleBannerOrder[0].data.subtitle}</S.Subtitle>
+          {/* <S.Subtitle>{handleBannerOrder[0].data.subtitle}</S.Subtitle> */}
           <Button as="a" href={handleBannerOrder[0].data.imglink} size="large">
             {handleBannerOrder[0].data.imglabel}
           </Button>
@@ -38,7 +38,7 @@ function BannerGrid({ items, classe = false }: BannerGridProps) {
         />
         <S.Caption>
           <S.Title>{RichText.render(handleBannerOrder[1].data.title)}</S.Title>
-          <S.Subtitle>{handleBannerOrder[1].data.subtitle}</S.Subtitle>
+          {/* <S.Subtitle>{handleBannerOrder[1].data.subtitle}</S.Subtitle> */}
 
           <Button as="a" href={handleBannerOrder[1].data.imglink} size="large">
             {handleBannerOrder[1].data.imglabel}
@@ -54,7 +54,7 @@ function BannerGrid({ items, classe = false }: BannerGridProps) {
         />
         <S.Caption>
           <S.Title>{RichText.render(handleBannerOrder[2].data.title)}</S.Title>
-          <S.Subtitle>{handleBannerOrder[2].data.subtitle}</S.Subtitle>
+          {/* <S.Subtitle>{handleBannerOrder[2].data.subtitle}</S.Subtitle> */}
           <Button as="a" href={handleBannerOrder[2].data.imglink} size="large">
             {handleBannerOrder[2].data.imglabel}
           </Button>
@@ -69,7 +69,7 @@ function BannerGrid({ items, classe = false }: BannerGridProps) {
         />
         <S.Caption>
           <S.Title>{RichText.render(handleBannerOrder[3].data.title)}</S.Title>
-          <S.Subtitle>{handleBannerOrder[3].data.subtitle}</S.Subtitle>
+          {/* <S.Subtitle>{handleBannerOrder[3].data.subtitle}</S.Subtitle> */}
           <Button as="a" href={handleBannerOrder[3].data.imglink} size="large">
             {handleBannerOrder[3].data.imglabel}
           </Button>
@@ -84,7 +84,7 @@ function BannerGrid({ items, classe = false }: BannerGridProps) {
         />
         <S.Caption>
           <S.Title>{RichText.render(handleBannerOrder[4].data.title)}</S.Title>
-          <S.Subtitle>{handleBannerOrder[4].data.subtitle}</S.Subtitle>
+          {/* <S.Subtitle>{handleBannerOrder[4].data.subtitle}</S.Subtitle> */}
           <Button as="a" href={handleBannerOrder[4].data.imglink} size="large">
             {handleBannerOrder[4].data.imglabel}
           </Button>
@@ -98,7 +98,7 @@ function BannerGrid({ items, classe = false }: BannerGridProps) {
         />
         <S.Caption>
           <S.Title>{RichText.render(handleBannerOrder[5].data.title)}</S.Title>
-          <S.Subtitle>{handleBannerOrder[5].data.subtitle}</S.Subtitle>
+          {/* <S.Subtitle>{handleBannerOrder[5].data.subtitle}</S.Subtitle> */}
           <Button as="a" href={handleBannerOrder[5].data.imglink} size="large">
             {handleBannerOrder[5].data.imglabel}
           </Button>

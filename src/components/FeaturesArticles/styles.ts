@@ -85,7 +85,7 @@ export const Card = styled.div`
 export const FeatureCard = styled.div`
   ${({ theme }) => css`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     box-sizing: border-box;
     margin-top: calc(${theme.spacings.large} * 2);

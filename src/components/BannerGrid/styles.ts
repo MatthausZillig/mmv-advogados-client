@@ -200,6 +200,7 @@ export const Image6 = styled(Image)<BannerType>`
 export const Title = styled.h2`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.medium};
+    margin-bottom: 0.8rem;
     font-weight: ${theme.font.bold};
     color: ${theme.colors.white};
     ${media.greaterThan('medium')`
