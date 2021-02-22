@@ -25,7 +25,7 @@ const Footer = () => (
 
         <nav aria-labelledby="social media">
           <a
-            href="https://www.instagram.com/vedana.advogados/?igshid=3y0t00iyw1y2"
+            href="https://www.instagram.com/mmv.advogados/"
             target="_blank"
             rel="noopenner, noreferrer"
           >

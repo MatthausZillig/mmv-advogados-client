@@ -52,7 +52,7 @@ export const Text = styled.p`
 export const Socio = styled.div`
   ${({ theme }) => css`
       width: 38rem;
-      min-height: 40rem;
+      min-height: 45rem;
       background: rgb(247, 249, 250);
       display: flex;
       flex-direction: column;
