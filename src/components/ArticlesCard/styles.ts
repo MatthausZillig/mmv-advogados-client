@@ -85,6 +85,13 @@ export const ArticleInfo = styled.div`
     justify-content: space-between;
   }
 
+  .descrip {
+    height: 20rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.8rem;
+  }
+
   h2,
   h6 {
     margin-bottom: 0.8rem;

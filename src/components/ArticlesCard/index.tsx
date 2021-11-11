@@ -23,7 +23,9 @@ const ArticlesCard = ({ items }: ArticlesProps) => {
           <S.ArticleInfo>
             <div className="jss78">
               <Heading>{RichText.render(item.data.title)}</Heading>
-              <h6>{RichText.render(item.data.description)}</h6>
+              <p className="descrip">
+                {RichText.render(item.data.description)}
+              </p>
               <div className="jss83">
                 {item.data.chips.map((chip: any, index: any) => (
                   <Chip key={index}>{chip.chip}</Chip>
