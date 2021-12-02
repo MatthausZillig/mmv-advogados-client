@@ -1,7 +1,8 @@
 ﻿export default {
-  title: 'Conheça nossos sócios',
+  title: 'André Miranda',
+  subtitle: 'Direito Trabalhista',
   backgroundImage: '/img/office_03.jpg',
-  floatImage: '/img/ligia.png',
+  floatImage: '/img/andre.png',
   buttonLabel: 'Saiba mais',
   buttonLink: '/Equipe',
   alignment: 'left'

@@ -1,7 +1,8 @@
 ﻿export default {
-  title: 'Conheça nossos sócios',
+  title: 'Marcos Monaco',
+  subtitle: 'Direito Trabalhista',
   backgroundImage: '/img/office.jpg',
-  floatImage: '/img/zillig.png',
+  floatImage: '/img/marcos.png',
   buttonLabel: 'Saiba mais',
   buttonLink: '/Equipe',
   alignment: 'right'

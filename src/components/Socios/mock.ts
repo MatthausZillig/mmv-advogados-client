@@ -1,6 +1,6 @@
 export default [
   {
-    img: '/img/vedana.png',
+    img: '/img/marcos.png',
     name: 'Marcos Monaco',
     area: 'Atuação: Direito Empresarial e Civil',
     formation:
@@ -20,7 +20,7 @@ export default [
     languages: 'Português, Inglês e Francês.'
   },
   {
-    img: '/img/vedana.png',
+    img: '/img/andre.png',
     name: 'André Seabra Carvalho de Miranda',
     area: 'Atuação:  Direito Tributário e Imobiliário',
     formation:

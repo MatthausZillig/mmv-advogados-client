@@ -3,7 +3,6 @@ import { Document } from 'prismic-javascript/types/documents'
 import FeaturesArticles from 'components/FeaturesArticles'
 import { HighlightProps } from 'components/Highlight'
 import MediaMatch from 'components/MediaMatch'
-
 import { Container } from 'components/Container'
 import OurStory from 'components/OurStory'
 import Hightlight from 'components/Highlight'
@@ -23,6 +22,8 @@ export type HomeTemplateProps = {
   monacoHightlight: HighlightProps
   mirandaHightlight: HighlightProps
   vedanaHightlight: HighlightProps
+  zillig: HighlightProps
+  ligia: HighlightProps
 }
 
 const settings: SliderSettings = {
@@ -44,7 +45,9 @@ const Home = ({
   banners,
   bannerGrid,
   featureArticles,
-  monacoHightlight
+  monacoHightlight,
+  zillig,
+  ligia
 }: HomeTemplateProps) => (
   <section>
     <Menu />
@@ -76,8 +79,8 @@ const Home = ({
       <S.SectionSocios>
         <Slider settings={settings}>
           <Hightlight {...monacoHightlight} />
-          <Hightlight {...monacoHightlight} />
-          <Hightlight {...monacoHightlight} />
+          <Hightlight {...zillig} />
+          <Hightlight {...ligia} />
         </Slider>
       </S.SectionSocios>
     </Container>
