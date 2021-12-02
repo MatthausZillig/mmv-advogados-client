@@ -1,6 +1,6 @@
 ﻿export default {
   title: 'Marcos Monaco',
-  subtitle: 'Direito Trabalhista',
+  subtitle: 'Direito Empresarial e Civil',
   backgroundImage: '/img/office.jpg',
   floatImage: '/img/marcos.png',
   buttonLabel: 'Saiba mais',
