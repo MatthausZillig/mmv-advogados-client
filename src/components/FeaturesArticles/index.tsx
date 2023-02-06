@@ -40,9 +40,11 @@ const FeaturesArticles = ({ items }: FeatureProps) => {
     <S.Wrapper>
       <S.FeatureTitle>
         <Heading lineLeft>Novos Artigos</Heading>
-        <Button as="a" href="/blog" withBorder>
-          Veja todos
-        </Button>
+        <MediaMatch greaterThan="medium">
+          <Button as="a" href="/blog" withBorder>
+            Veja todos
+          </Button>
+        </MediaMatch>
       </S.FeatureTitle>
       <S.FeatureCard data-testid="card">
         {items &&

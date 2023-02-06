@@ -24,13 +24,13 @@ const Home = ({ equipe }: EquipeTemplateProps) => {
           <Container>
             <S.SectionHeadings>
               <Heading lineLeft lineColor="heading" color="black">
-                Conheça nossos socios
+                Nossos Parceiros
               </Heading>
             </S.SectionHeadings>
             <Socios items={equipe} />
             <S.SectionHeadingsTwo>
               <Heading lineLeft lineColor="heading" color="black">
-                Conheça nosso time
+                Conheça nossa Equipe
               </Heading>
             </S.SectionHeadingsTwo>
             <Team items={equipe} />

@@ -12,9 +12,7 @@ const Footer = () => (
           contato
         </Heading>
 
-        <a href="mailto:atendimento@mmvadvogados.com.br">
-          atendimento@mmvadvogados.com.br
-        </a>
+        <a href="mailto:trabalhista@vedana.adv.br">trabalhista@vedana.adv.br</a>
         <a href="tel:+55-11-2359-9600">+55 11 2359-9600</a>
       </S.Column>
 
@@ -25,21 +23,21 @@ const Footer = () => (
 
         <nav aria-labelledby="social media">
           <a
-            href="https://www.instagram.com/mmv.advogados/"
+            href="https://www.instagram.com/vedana.advogados/"
             target="_blank"
             rel="noopenner, noreferrer"
           >
             Instagram
           </a>
           <a
-            href="https://www.linkedin.com/company/monaco-miranda-vedana-&-caroni-reis/"
+            href="https://www.linkedin.com/in/rodrigovedanaadv/"
             target="_blank"
             rel="noopenner, noreferrer"
           >
             Linkedin
           </a>
           <a
-            href="https://www.facebook.com/MMVAdvogados"
+            href="https://www.facebook.com/vedana.trabalhista"
             target="_blank"
             rel="noopenner, noreferrer"
           >

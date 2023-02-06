@@ -1,6 +1,6 @@
 ﻿export default {
   img: '/img/advogados.jpg',
-  title: 'Conheça nosso time',
+  title: 'Conheça nossa Equipe',
   buttonLabel: 'Veja mais',
   buttonLink: '/socios',
   ribbon: 'Advogados'

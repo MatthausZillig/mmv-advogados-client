@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding-bottom: 10rem;
   flex-wrap: wrap;
@@ -62,6 +62,7 @@ export const Socio = styled.div`
       padding: ${theme.spacings.medium};
       text-align: left;
       margin-bottom: 4rem;
+      margin-right: 4rem;
       ${media.lessThan('medium')`
         width: 100%
       `}
