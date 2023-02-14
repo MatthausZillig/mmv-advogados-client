@@ -3,7 +3,6 @@ import Link from 'next/link'
 
 import * as S from './styles'
 
-import Logo from 'components/Logo'
 import Button from 'components/Button'
 import MediaMatch from 'components/MediaMatch'
 import ContactForm from 'components/ContactForm'
@@ -38,7 +37,7 @@ const Menu = () => {
       </S.TopBar>
       <S.Wrapper data-testid="menu" inScroll={navbar}>
         <S.MenuWrapper>
-          <Logo width={400} />
+          <img src="/img/brandmark-design.png" />
           <MediaMatch lessThan="large">
             <S.Input id="menu-hamburguer" type="checkbox" />
             <label htmlFor="menu-hamburguer">

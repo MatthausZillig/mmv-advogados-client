@@ -254,6 +254,9 @@ export const MenuWrapper = styled.div`
     ${media.lessThan('medium')`
     padding: ${theme.spacings.small} ${theme.spacings.xxsmall} ${theme.spacings.small} ${theme.spacings.xxsmall};
     `}
+    img {
+      width: 30rem;
+    }
   `}
 `
 export const MenuItens = styled.div`
