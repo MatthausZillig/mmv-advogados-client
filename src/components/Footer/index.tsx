@@ -12,8 +12,8 @@ const Footer = () => (
           contato
         </Heading>
 
-        <a href="mailto:trabalhista@vedana.adv.br">trabalhista@vedana.adv.br</a>
-        <a href="tel:+55-11-2359-9600">+55 11 2359-9600</a>
+        <a href="mailto:trabalhista@vedana.adv.br">atendimento@vedana.adv.br</a>
+        <a href="tel:+55-11-99563-9043">+55 11 99563-9043</a>
       </S.Column>
 
       <S.Column>

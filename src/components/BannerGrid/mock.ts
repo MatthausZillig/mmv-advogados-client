@@ -1,17 +1,17 @@
 ﻿export default [
   {
-    img: '/img/predios.jpg',
-    title: 'Direito Condominial',
-    subtitle: 'Assessoria Jurídica',
-    imgLabel: 'Saiba mais',
-    imgLink: '/areas/area/imobiliario'
-  },
-  {
     img: '/img/industrial.jpg',
     title: 'Direito do Trabalho',
     subtitle: 'Assessoria Jurídica',
     imgLabel: 'Saiba mais',
     imgLink: '/areas/area/trabalho'
+  },
+  {
+    img: '/img/predios.jpg',
+    title: 'Direito Condominial',
+    subtitle: 'Assessoria Jurídica',
+    imgLabel: 'Saiba mais',
+    imgLink: '/areas/area/imobiliario'
   },
   {
     img: '/img/empresarial.jpeg',

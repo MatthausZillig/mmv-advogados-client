@@ -28,7 +28,7 @@ const WrapperModifiers = {
 }
 export const Wrapper = styled.section<BannerType>`
   ${({ theme, classe }) => css`
-    display: grid;
+    display: flex;
     height: 70rem;
     cursor: pointer;
 
@@ -87,8 +87,6 @@ export const Caption = styled.div`
       left: 0;
     `}
     ${media.lessThan('medium')`
-
-      width: 280px;
       height: 100%;
     `}
   `}
