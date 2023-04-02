@@ -128,14 +128,7 @@ const ContactForm = ({ active, set }) => {
             value={query.areas}
             onChange={handleParam()}
           >
-            <option value="Imobiliário/Condominial">
-              Imobiliário/Condominial
-            </option>
             <option value="Trabalhista">Trabalhista</option>
-            <option value="Civil">Civil</option>
-            <option value="Penal">Penal</option>
-            <option value="Empresarial">Empresarial</option>
-            <option value="Consumidor">Consumidor</option>
           </select>
         </S.InputWrapper>
         <S.InputWrapper>

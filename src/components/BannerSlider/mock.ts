@@ -1,13 +1,5 @@
 ﻿export default [
   {
-    img: '/img/condominal.jpeg',
-    title: 'Condominial',
-    subtitle: '<p>Assessoria Jurídica</p>',
-    buttonLabel: 'Saiba mais',
-    buttonLink: '/areas/direito-condominial',
-    ribbon: 'Direito Imobiliário'
-  },
-  {
     img: '/img/empresarial_03.jpeg',
     title: 'Relações do Trabalho',
     subtitle: '<p>Assessoria Jurídica</p>',
@@ -22,5 +14,13 @@
     buttonLabel: 'Saiba mais',
     buttonLink: '/areas/direito-empresarial',
     ribbon: 'Direito Empresarial'
+  },
+  {
+    img: '/img/condominal.jpeg',
+    title: 'Condominial',
+    subtitle: '<p>Assessoria Jurídica</p>',
+    buttonLabel: 'Saiba mais',
+    buttonLink: '/areas/direito-condominial',
+    ribbon: 'Direito Imobiliário'
   }
 ]

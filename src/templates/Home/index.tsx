@@ -45,9 +45,7 @@ const Home = ({
   banners,
   bannerGrid,
   featureArticles,
-  monacoHightlight,
-  zillig,
-  ligia
+  monacoHightlight
 }: HomeTemplateProps) => (
   <section>
     <Menu />
@@ -79,8 +77,6 @@ const Home = ({
       <S.SectionSocios>
         <Slider settings={settings}>
           <Hightlight {...monacoHightlight} />
-          <Hightlight {...zillig} />
-          <Hightlight {...ligia} />
         </Slider>
       </S.SectionSocios>
     </Container>

@@ -32,7 +32,7 @@ const Menu = () => {
       <S.TopBar>
         <div>
           <p>Contato:</p>
-          <a href="tel:+55-11-2359-9600">+55 11 2359-9600</a>
+          <a href="tel:+55-11-99563-9043">+55 11 99563-9043</a>
         </div>
       </S.TopBar>
       <S.Wrapper data-testid="menu" inScroll={navbar}>
@@ -77,28 +77,7 @@ const Menu = () => {
               <Link href="/areas">Áreas de atuação</Link>
               <S.MenuItensAreas>
                 <S.SubItens>
-                  <Link href="/areas/area/civil">Direito Civil</Link>
-                </S.SubItens>
-                <S.SubItens>
                   <Link href="/areas/area/trabalho">Direito do Trabalho</Link>
-                </S.SubItens>
-                <S.SubItens>
-                  <Link href="/areas/area/condominial">
-                    Direito Imobiliário
-                  </Link>
-                </S.SubItens>
-                <S.SubItens>
-                  <Link href="/areas/area/empresarial">
-                    Direito Empresarial
-                  </Link>
-                </S.SubItens>
-                <S.SubItens>
-                  <Link href="/areas/area/consumidor">
-                    Direito do Consumidor
-                  </Link>
-                </S.SubItens>
-                <S.SubItens>
-                  <Link href="/areas/area/familia">Direito de Família</Link>
                 </S.SubItens>
               </S.MenuItensAreas>
             </S.MenuLink>

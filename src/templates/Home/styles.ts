@@ -27,6 +27,7 @@ export const SectionBanner = styled.section`
     `}
     ${media.greaterThan('medium')`
       margin: 20rem 0 ${theme.spacings.large};
+      height: 60rem;
       position: relative;
       z-index: ${theme.layers.base};
     `}

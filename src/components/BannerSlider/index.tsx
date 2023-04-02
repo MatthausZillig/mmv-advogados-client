@@ -27,7 +27,6 @@ const settings: SliderSettings = {
 }
 
 const BannerSlider = ({ items }: BannerSliderProps) => {
-  console.log(items)
   return (
     <S.Wrapper>
       <Slider settings={settings}>
