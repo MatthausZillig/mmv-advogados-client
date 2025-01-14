@@ -9,7 +9,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <SEO
-        title="Monaco, Mirando & Vedana"
+        title="Vedana - Sociedade de Advogados"
         image="/img/logo-transparent.png"
         description="Competência técnica na área Jurídica e no atendimento aos clientes. Clique Aqui e escloha a Monaco, Miranda & Vedana Advogados Associados"
       />
